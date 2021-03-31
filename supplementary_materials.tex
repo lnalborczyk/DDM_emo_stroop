@@ -40,8 +40,8 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={Supplementary materials to `Different processing of spatial frequencies in autism spectrum compared to control suggested by an emotional stroop with filtered primes'},
-  pdfauthor={Adeline Lacroix1, Ladislas Nalborczyk2, Marie Gomot3, Klara Kovarski4,5,6, Sylvie Chokron1, Marta Garrido7, Frédéric Dutheil8, \& Martial Mermillod1},
+  pdftitle={Supplementary materials to `Effect of spatially filtered primes on emotion categorization with an interference context in autism and typically developing'},
+  pdfauthor={Adeline Lacroix1, Ladislas Nalborczyk2, Frédéric Dutheil3, Klara Kovarski4,5, Sylvie Chokron4,5, Marta Garrido6, Marie Gomot7, \& Martial Mermillod1},
   pdflang={en-EN},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
@@ -199,8 +199,8 @@
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
-\title{Supplementary materials to `Different processing of spatial frequencies in autism spectrum compared to control suggested by an emotional stroop with filtered primes'}
-\author{Adeline Lacroix\textsuperscript{1}, Ladislas Nalborczyk\textsuperscript{2}, Marie Gomot\textsuperscript{3}, Klara Kovarski\textsuperscript{4,5,6}, Sylvie Chokron\textsuperscript{1}, Marta Garrido\textsuperscript{7}, Frédéric Dutheil\textsuperscript{8}, \& Martial Mermillod\textsuperscript{1}}
+\title{Supplementary materials to `Effect of spatially filtered primes on emotion categorization with an interference context in autism and typically developing'}
+\author{Adeline Lacroix\textsuperscript{1}, Ladislas Nalborczyk\textsuperscript{2}, Frédéric Dutheil\textsuperscript{3}, Klara Kovarski\textsuperscript{4,5}, Sylvie Chokron\textsuperscript{4,5}, Marta Garrido\textsuperscript{6}, Marie Gomot\textsuperscript{7}, \& Martial Mermillod\textsuperscript{1}}
 \date{}
 
 
@@ -210,7 +210,7 @@ Correspondence concerning this article should be addressed to Adeline Lacroix, L
 
 }
 
-\affiliation{\vspace{0.5cm}\textsuperscript{1} LPNC, Univ. Grenoble Alpes, Univ. Savoie Mont Blanc, CNRS, 38000, Grenoble, France.\\\textsuperscript{2} GIPSA-lab, CNRS, Univ. Grenoble Alpes, 38000, Grenoble, France.\\\textsuperscript{3} UMR 1253 iBrain, Université de Tours, Inserm, Tours, France\\\textsuperscript{4} Fondation Ophtalmologique A. de Rothschild, Paris, France.\\\textsuperscript{5} CNRS (Integrative Neuroscience and Cognition Center, UMR 8002), Paris, France.\\\textsuperscript{6} Université Paris Descartes, Sorbonne Paris Cité, Paris, France.\\\textsuperscript{7} Cognitive Neuroscience and Computational Psychiatry Lab, Melbourne School of Psychological Sciences, The University of Melbourne, Australia.\\\textsuperscript{8} Université Clermont Auvergne, CNRS, LaPSCo, CHU Clermont-Ferrand, WittyFit, F-63000 Clermont-Ferrand, France.}
+\affiliation{\vspace{0.5cm}\textsuperscript{1} LPNC, Univ. Grenoble Alpes, Univ. Savoie Mont Blanc, CNRS, 38000, Grenoble, France\\\textsuperscript{2} GIPSA-lab, CNRS, Univ. Grenoble Alpes, 38000, Grenoble, France.\\\textsuperscript{3} Université Clermont Auvergne, CNRS, LaPSCo, CHU Clermont-Ferrand, WittyFit, F-63000 Clermont-Ferrand, France\\\textsuperscript{4} Hôpital Fondation Ophtalmologique A. de Rothschild, Paris, France.\\\textsuperscript{5} Université de Paris, INCC UMR 8002, CNRS, F-75006 Paris, France\\\textsuperscript{6} Cognitive Neuroscience and Computational Psychiatry Lab, Melbourne School of Psychological Sciences, The University of Melbourne, Australia\\\textsuperscript{7} UMR 1253 iBrain, Université de Tours, Inserm, Tours, France}
 
 \begin{document}
 \maketitle
@@ -222,8 +222,421 @@ Correspondence concerning this article should be addressed to Adeline Lacroix, L
 \setstretch{1.25}
 \newpage
 
-\hypertarget{exploring-the-data}{%
-\section{Exploring the data}\label{exploring-the-data}}
+\hypertarget{model-comparison-for-the-response-time-analysis}{%
+\section{Model comparison for the response time analysis}\label{model-comparison-for-the-response-time-analysis}}
+
+The first analysis was conducted on our data without:\\
+- participants with accuracy \textless{} 50 \% (1 autistic participant)\\
+- trials with RT \textless{} 300 ms (1,50 \%)
+
+\hypertarget{inclusion-of-different-predictors}{%
+\subsection{Inclusion of different predictors}\label{inclusion-of-different-predictors}}
+
+We first compared the three following models of increasing complexity and we kept the best one (i.e., the model with the lowest LOOIC - Leave-one-out cross validation information criterion - and the highest weight):
+
+\begin{itemize}
+\item
+  BMgcp : RT \textasciitilde{} 1 + GroupC * PrimeC * CongC + (1 + CongC * PrimeC \textbar\textbar{} ID) + (1 +
+  GroupC * PrimeC * CongC \textbar\textbar{} Target)
+\item
+  BMgcpe : RT \textasciitilde{} 1 + GroupC * PrimeC * CongC * EmoC + (1 + CongC * PrimeC \emph{
+  EmoC \textbar\textbar{} ID) + (1 + GroupC } PrimeC * CongC * EmoC \textbar\textbar{} Target)
+\item
+  BMgcpes : RT \textasciitilde{} 1 + GroupC * PrimeC * CongC * EmoC * SexC + (1 + CongC * PrimeC * EmoC \textbar\textbar{} ID) + (1 + GroupC * PrimeC * CongC * EmoC * SexC \textbar\textbar{} Target)
+\item
+  BMgcpesP : RT \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC + SexC + SexC:GroupC + (1 + CongC * PrimeC * EmoC \textbar\textbar{} ID) + (1 + GroupC * CongC * PrimeC *EmoC + SexC + SexC:GroupC\textbar\textbar{} Target)
+\end{itemize}
+
+\begin{table}[htb]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:modelComp1RT}Expected log pointise predictive density (ELPD) and LOOIC for each BLMM on RT.}
+
+\tiny{
+
+\begin{tabular}{cccccccccc}
+\toprule
+model & \multicolumn{1}{c}{elpd\_diff} & \multicolumn{1}{c}{se\_diff} & \multicolumn{1}{c}{elpd\_loo} & \multicolumn{1}{c}{se\_elpd\_loo} & \multicolumn{1}{c}{p\_loo} & \multicolumn{1}{c}{se\_p\_loo} & \multicolumn{1}{c}{looic} & \multicolumn{1}{c}{se\_looic} & \multicolumn{1}{c}{Model\_Weights}\\
+\midrule
+BMgcpe & 0.000 & 0.000 & -92,727.743 & 122.793 & 282.308 & 8.677 & 185,455.485 & 245.587 & 0.745\\
+BMgcpesP & -1.408 & 0.755 & -92,729.151 & 122.819 & 288.954 & 8.851 & 185,458.301 & 245.638 & 0.182\\
+BMgcpes & -2.323 & 4.451 & -92,730.066 & 123.017 & 326.123 & 9.920 & 185,460.131 & 246.034 & 0.073\\
+BMgcp & -180.740 & 21.709 & -92,908.483 & 122.026 & 160.269 & 5.267 & 185,816.965 & 244.051 & 0.000\\
+\bottomrule
+\end{tabular}
+
+}
+
+\end{threeparttable}
+\end{center}
+
+\end{table}
+
+As reported on \emph{Table \ref{tab:modelComp1RT}}, \texttt{BMgcpe} appeared to be the best model compared with models without emotion or with sex (full model or parsimonious model). Hence, we kept this model and then added covariates to this model.
+
+\hypertarget{model-with-covariates}{%
+\subsection{Model with covariates}\label{model-with-covariates}}
+
+As preregistered, we added some covariates in the model and again, we kept the best one after model comparison. We included either PIQ or FSIQ and AQ as our two groups differed on these variables.
+
+We compared the following models:
+
+\begin{itemize}
+\item
+  BMgcpe : RT \textasciitilde{} 1 + GroupC * PrimeC * CongC * EmoC + (1 + CongC * PrimeC \emph{
+  EmoC \textbar\textbar{} ID) + (1 + GroupC } PrimeC * CongC * EmoC \textbar\textbar{} Target)
+\item
+  BMf : RT \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC + FSIQc + (1 + CongC * PrimeC * EmoC \textbar\textbar{} ID) + (1 + GroupC * CongC * PrimeC * EmoC \textbar\textbar{} Target)
+\item
+  BMa : RT \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC + AQc + (1 + CongC * PrimeC * EmoC \textbar\textbar{} ID) + (1 + GroupC * CongC * PrimeC *EmoC \textbar\textbar{} Target)
+\item
+  BMp : RT \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC + PIQc + (1 + CongC * PrimeC * EmoC \textbar\textbar{} ID) + (1 + GroupC * CongC * PrimeC *EmoC \textbar\textbar{} Target)
+\item
+  BMfa : RT \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC + FSIQc + AQc + (1 + CongC * PrimeC * EmoC \textbar\textbar{} ID) + (1 + GroupC * CongC * PrimeC *EmoC \textbar\textbar{} Target)
+\item
+  BMpa : RT \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC + PIQc + AQc + (1 + CongC * PrimeC * EmoC \textbar\textbar{} ID) + (1 + GroupC * CongC * PrimeC *EmoC \textbar\textbar{} Target)
+\end{itemize}
+
+\begin{table}[htb]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:modelComp2RT}Expected log pointise predictive density (ELPD) and LOOIC for each of the four BLMMs on RT, with covariates}
+
+\tiny{
+
+\begin{tabular}{cccccccccc}
+\toprule
+model & \multicolumn{1}{c}{elpd\_diff} & \multicolumn{1}{c}{se\_diff} & \multicolumn{1}{c}{elpd\_waic} & \multicolumn{1}{c}{se\_elpd\_waic} & \multicolumn{1}{c}{p\_waic} & \multicolumn{1}{c}{se\_p\_waic} & \multicolumn{1}{c}{waic} & \multicolumn{1}{c}{se\_waic} & \multicolumn{1}{c}{Model\_Weights}\\
+\midrule
+BMgcpe & 0.000 & 0.000 & -92,726.667 & 122.773 & 281.232 & 8.621 & 185,453.334 & 245.545 & 0.292\\
+BMpa & -0.011 & 0.268 & -92,726.678 & 122.772 & 281.177 & 8.577 & 185,453.356 & 245.543 & 0.278\\
+BMf & -0.607 & 0.348 & -92,727.274 & 122.797 & 281.521 & 8.645 & 185,454.548 & 245.594 & 0.161\\
+BMa & -0.836 & 0.251 & -92,727.503 & 122.775 & 281.669 & 8.625 & 185,455.006 & 245.549 & 0.126\\
+BMfa & -1.238 & 0.305 & -92,727.905 & 122.795 & 281.247 & 8.604 & 185,455.810 & 245.590 & 0.078\\
+BMp & -1.430 & 0.284 & -92,728.097 & 122.804 & 282.796 & 8.688 & 185,456.194 & 245.608 & 0.064\\
+\bottomrule
+\end{tabular}
+
+}
+
+\end{threeparttable}
+\end{center}
+
+\end{table}
+
+\begin{table}[htb]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:summaryBMgcpe}Estimates and BF01 from the BLMM on RT.}
+
+\small{
+
+\begin{tabular}{ccccccc}
+\toprule
+Predictors & \multicolumn{1}{c}{Estimate} & \multicolumn{1}{c}{SE} & \multicolumn{1}{c}{Lower} & \multicolumn{1}{c}{Upper} & \multicolumn{1}{c}{Rhat} & \multicolumn{1}{c}{BF01}\\
+\midrule
+Intercept & 696.93 & 13.69 & 670.39 & 724.09 & 1.00 & NA\\
+Group & 66.78 & 24.40 & 16.93 & 113.38 & 1.00 & 0.069\\
+Prime & -12.91 & 2.97 & -18.70 & -6.93 & 1.00 & 1.277 x 10\textasciicircum{}-4\\
+Congruency & -14.78 & 2.88 & -20.64 & -9.17 & 1.00 & 1.481 x 10\textasciicircum{}-4\\
+Emotion & 18.90 & 6.73 & 5.59 & 31.99 & 1.00 & 0.194\\
+Group x Prime & -1.30 & 5.84 & -12.74 & 10.12 & 1.00 & 8.487\\
+Group x Congruency & -2.42 & 5.43 & -13.10 & 8.15 & 1.00 & 8.386\\
+Prime x Congruency & 4.53 & 4.54 & -4.36 & 13.56 & 1.00 & 6.479\\
+Group x Emotion & -8.04 & 9.48 & -26.65 & 10.53 & 1.00 & 3.732\\
+Prime x Emotion & 3.70 & 4.59 & -5.32 & 12.66 & 1.00 & 8.184\\
+Congruency x Emotion & -4.13 & 4.60 & -13.22 & 4.80 & 1.00 & 7.517\\
+Group x Prime x Congruency & 2.28 & 8.63 & -14.63 & 19.04 & 1.00 & 5.494\\
+Group x Prime x Emotion & 21.19 & 9.23 & 3.08 & 39.21 & 1.00 & 0.403\\
+Group x Congruency x Emotion & 6.08 & 9.11 & -11.87 & 23.76 & 1.00 & 4.594\\
+Prime x Congruency x Emotion & -8.07 & 9.15 & -26.34 & 9.98 & 1.00 & 3.671\\
+Group x Prime x Congruency x Emotion & 7.98 & 17.00 & -25.18 & 41.78 & 1.00 & 2.666\\
+\bottomrule
+\addlinespace
+\end{tabular}
+
+}
+
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} For each predictor, the first two columns represent the estimated
+    most probable value for the slope and its standard error (SE). The 'Lower' and 'Upper' are the bounds of the 95\% CrI, whereas the 'Rhat' column reports the Gelman-Rubin statistic regarding the convergence. The last column reports the Bayes factor in favour of the null hypothesis (BF01).}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{center}
+
+\end{table}
+
+The model without any covariates appeared to be the best model (see \emph{Table \ref{tab:modelComp2RT}}), despite the model with AQ and PIQ seems to be almost equally good. The outcome of these two models are very similar and we kept the more parsimonious (note that there is no evidence of an effect of AQ and PIQ on our data when looking at the output of the model with covariates).
+We checked the quality of this model with posterior predictive checking, which seemed to be good (\emph{Figure 3} of the main paper). The results of this BLMM are summarized in \emph{Table \ref{tab:summaryBMgcpe}} and are described in the paper.
+
+\newpage
+
+\hypertarget{analysis-without-outliers}{%
+\section{Analysis without outliers}\label{analysis-without-outliers}}
+
+We also ran our model removing participants who were outliers (results below Quartile 1 -- 1.5 * Interquartile range or above Quartile 3 + 1.5 * Interquartile Range) on at least half of the condition for accuracy or for RT (3 ASD - 2 females, 1 male - and 3 TD - 2 females, 1 male, as preregistered on \url{https://osf.io/345jv}.
+
+All relevant statistics regarding groups description are set out in \emph{Table \ref{tab:demoWO}}.
+
+\hypertarget{demographical-data}{%
+\subsection{Demographical data}\label{demographical-data}}
+
+\begin{table}[htb]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:demoWO}Subject demographics – Means (M), standard deviations (SD) and BF01.}
+
+\begin{tabular}{cccc}
+\toprule
+ & \multicolumn{1}{c}{Group: ASD (N = 24)} & \multicolumn{1}{c}{Group: TD (N = 31)} & \multicolumn{1}{c}{BF01}\\
+\midrule
+Age & 33.08 (8.37) & 31.68 (7.29) & 3.04\\
+Education & 14.79 (2.69) & 15.90 (2.75) & 1.445\\
+FSIQ & 126.42 (13.92) & 113.84 (15.15) & 0.071\\
+VIQ & 128.88 (10.63) & 120.52 (14.71) & 0.394\\
+PIQ & 118.08 (13.43) & 104.06 (15.14) & 0.026\\
+AQ & 36.17 (7.11) & 15.26 (6.24) & 1.026 x 10\textasciicircum{}-13\\
+Reading & 0.10 (0.88) & -0.07 (0.55) & 2.61\\
+Stroop Effect & 0.45 (0.81) & 0.55 (0.77) & 3.306\\
+\bottomrule
+\addlinespace
+\end{tabular}
+
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} *FSIQ = Full Scale Intelligence Quotient; VIQ = Verbal Intelligence Quotient; PIQ = Performance Intelligence Quotient ; AQ = Autism-Spectrum Quotient.}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{center}
+
+\end{table}
+
+\hypertarget{posterior-predictive-check}{%
+\subsection{Posterior predictive check}\label{posterior-predictive-check}}
+
+\begin{figure}[htb]
+
+{\centering \includegraphics[width=\textwidth]{supplementary_materials_files/figure-latex/ppcheckBMwo-1} 
+
+}
+
+\caption{Posterior predictive checking for the BLMM without outliers.}\label{fig:ppcheckBMwo}
+\end{figure}
+
+\newpage
+
+\hypertarget{results}{%
+\subsection{Results}\label{results}}
+
+\begin{table}[htb]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:summaryBMwo}Estimates from the ExGaussian BLMM on RT without outliers.}
+
+\small{
+
+\begin{tabular}{ccccccc}
+\toprule
+Predictors & \multicolumn{1}{c}{Estimate} & \multicolumn{1}{c}{SE} & \multicolumn{1}{c}{Lower} & \multicolumn{1}{c}{Upper} & \multicolumn{1}{c}{Rhat} & \multicolumn{1}{c}{BF01}\\
+\midrule
+Intercept & 667.48 & 12.51 & 643.00 & 692.00 & 1.00 & NA\\
+Group & 52.29 & 22.12 & 7.77 & 94.71 & 1.00 & 0.16\\
+Prime & -11.19 & 2.71 & -16.48 & -5.87 & 1.00 & 0.01\\
+Congruency & -11.43 & 2.66 & -16.72 & -6.15 & 1.00 & 0.01\\
+Emotion & 18.02 & 5.99 & 6.27 & 29.70 & 1.00 & 0.11\\
+Group x Prime & 1.22 & 5.11 & -8.76 & 11.18 & 1.00 & 9.91\\
+Group x Congruency & 0.73 & 4.74 & -8.65 & 10.06 & 1.00 & 10.62\\
+Prime x Congruency & 6.09 & 4.64 & -3.08 & 15.26 & 1.00 & 4.70\\
+Group x Emotion & -11.31 & 8.34 & -27.51 & 5.31 & 1.00 & 2.51\\
+Prime x Emotion & 1.02 & 4.47 & -7.77 & 9.85 & 1.00 & 11.74\\
+Congruency x Emotion & -0.40 & 4.55 & -9.35 & 8.46 & 1.00 & 11.19\\
+Group x Prime x Congruency & 9.28 & 8.79 & -8.12 & 26.42 & 1.00 & 3.33\\
+Group x Prime x Emotion & 24.83 & 8.96 & 7.31 & 42.21 & 1.00 & 0.15\\
+Group x Congruency x Emotion & 11.32 & 8.84 & -5.88 & 28.78 & 1.00 & 2.63\\
+Prime x Congruency x Emotion & -5.08 & 9.30 & -23.30 & 13.47 & 1.00 & 4.80\\
+Group x Prime x Congruency x Emotion & 17.19 & 17.56 & -17.54 & 51.71 & 1.00 & 1.86\\
+\bottomrule
+\end{tabular}
+
+}
+
+\end{threeparttable}
+\end{center}
+
+\end{table}
+
+\newpage
+
+\hypertarget{analysis-on-inverse-efficiency-score-ies}{%
+\section{Analysis on Inverse Efficiency Score (IES)}\label{analysis-on-inverse-efficiency-score-ies}}
+
+As preregistered, we also fitted models on the IES (= Response Time/Accuracy) to take into account the accuracy.
+
+\hypertarget{inclusion-of-different-predictors-1}{%
+\subsection{Inclusion of different predictors}\label{inclusion-of-different-predictors-1}}
+
+We compared the 3 following models:
+
+\begin{itemize}
+\item
+  IBMgcp : IES \textasciitilde{} 1 + GroupC * CongC * PrimeC + (1 \textbar{} ID)
+\item
+  IBMgcpe: IES \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC+ (1 \textbar{} ID)
+\item
+  IBMgcpes : IES \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC * SexC + (1 \textbar{} ID)
+\item
+  IBMgcpesP: IES \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC + SexC + SexC : EmoC + (1 \textbar{} ID)
+\end{itemize}
+
+\begin{table}[htb]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:modelCompIES1}Expected log pointise predictive density (ELPD) and LOOIC for each of the three BLMM on IES.}
+
+\tiny{
+
+\begin{tabular}{cccccccccc}
+\toprule
+model & \multicolumn{1}{c}{elpd\_diff} & \multicolumn{1}{c}{se\_diff} & \multicolumn{1}{c}{elpd\_loo} & \multicolumn{1}{c}{se\_elpd\_loo} & \multicolumn{1}{c}{p\_loo} & \multicolumn{1}{c}{se\_p\_loo} & \multicolumn{1}{c}{looic} & \multicolumn{1}{c}{se\_looic} & \multicolumn{1}{c}{Model\_Weights}\\
+\midrule
+IBMgcpe & 0.000 & 0.000 & -2,798.330 & 28.402 & 87.995 & 13.260 & 5,596.661 & 56.805 & 0.535\\
+IBMgcpesP & -0.147 & 0.283 & -2,798.478 & 28.456 & 88.162 & 13.335 & 5,596.955 & 56.912 & 0.462\\
+IBMgcpes & -5.391 & 3.453 & -2,803.722 & 28.166 & 99.316 & 13.894 & 5,607.443 & 56.332 & 0.002\\
+IBMgcp & -11.643 & 6.458 & -2,809.973 & 27.255 & 79.990 & 11.494 & 5,619.946 & 54.510 & 0.000\\
+\bottomrule
+\end{tabular}
+
+}
+
+\end{threeparttable}
+\end{center}
+
+\end{table}
+
+The model \texttt{IBMgcpe} seemed to be the best one (see \emph{Table \ref{tab:modelCompIES1}}).
+
+\hypertarget{inclusion-of-covariates}{%
+\subsection{Inclusion of covariates}\label{inclusion-of-covariates}}
+
+We then included covariates in the best model. We compared the following models:\\
+- IBMfa : IES \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC + FSIQ + AQ + (1 \textbar{} ID)
+
+\begin{itemize}
+\item
+  IBMf : IES \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC + FSIQ +(1 \textbar{} ID)
+\item
+  IBMa : IES \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC + AQ +(1 \textbar{} ID)
+\item
+  IBMpa : IES \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC + PIQ + AQ + (1 \textbar{} ID)
+\item
+  IBMp : IES \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC + PIQ + (1 \textbar{} ID)
+\end{itemize}
+
+\begin{table}[htb]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:modelCompIES2}Expected log pointise predictive density (ELPD) and LOOIC for each of the four BLMM on IES, with covariates.}
+
+\tiny{
+
+\begin{tabular}{cccccccccc}
+\toprule
+model & \multicolumn{1}{c}{elpd\_diff} & \multicolumn{1}{c}{se\_diff} & \multicolumn{1}{c}{elpd\_loo} & \multicolumn{1}{c}{se\_elpd\_loo} & \multicolumn{1}{c}{p\_loo} & \multicolumn{1}{c}{se\_p\_loo} & \multicolumn{1}{c}{looic} & \multicolumn{1}{c}{se\_looic} & \multicolumn{1}{c}{Model\_Weights}\\
+\midrule
+IBMf & 0.000 & 0.000 & -2,796.274 & 27.783 & 85.749 & 11.867 & 5,592.549 & 55.565 & 0.222\\
+IBMa & -1.287 & 0.820 & -2,797.561 & 28.081 & 87.203 & 12.582 & 5,595.122 & 56.161 & 0.196\\
+IBMpa & -1.311 & 1.159 & -2,797.586 & 28.189 & 87.227 & 12.787 & 5,595.171 & 56.378 & 0.191\\
+IBMp & -1.399 & 1.242 & -2,797.673 & 28.225 & 87.259 & 12.851 & 5,595.346 & 56.451 & 0.175\\
+IBMfa & -1.742 & 1.374 & -2,798.016 & 28.362 & 87.495 & 12.993 & 5,596.032 & 56.724 & 0.124\\
+IBMgcpe & -2.056 & 1.509 & -2,798.330 & 28.402 & 87.995 & 13.260 & 5,596.661 & 56.805 & 0.091\\
+\bottomrule
+\end{tabular}
+
+}
+
+\end{threeparttable}
+\end{center}
+
+\end{table}
+
+The model \texttt{IBMf}, with FSIQ as a covariate, appear to be the best model (see \emph{Table \ref{tab:modelCompIES2}}). We checked the validity of this model with posterior predictive check (cf.~\emph{Figure 2}), which appeared to be good.
+
+\hypertarget{posterior-predictive-check-1}{%
+\subsection{Posterior predictive check}\label{posterior-predictive-check-1}}
+
+\begin{figure}[!h]
+
+{\centering \includegraphics[width=\textwidth]{supplementary_materials_files/figure-latex/ppcheckIBMf-1} 
+
+}
+
+\caption{Posterior predictive checking for BLMM concerning the IES.}\label{fig:ppcheckIBMf}
+\end{figure}
+
+\newpage
+
+\hypertarget{results-1}{%
+\subsection{Results}\label{results-1}}
+
+\begin{table}[htb]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:summaryIBMf}Estimates from the ExGaussian BLMM concerning the IES.}
+
+\small{
+
+\begin{tabular}{ccccccc}
+\toprule
+Predictors & \multicolumn{1}{c}{Estimate} & \multicolumn{1}{c}{SE} & \multicolumn{1}{c}{Lower} & \multicolumn{1}{c}{Upper} & \multicolumn{1}{c}{Rhat} & \multicolumn{1}{c}{BF01}\\
+\midrule
+Intercept & 730.19 & 19.53 & 691.32 & 767.97 & 1.00 & NA\\
+Group & 83.46 & 31.59 & 20.32 & 144.61 & 1.00 & 0.061\\
+Congruency & -36.86 & 5.55 & -47.93 & -26.20 & 1.00 & 5.523 x 10\textasciicircum{}-17\\
+Prime & -16.09 & 5.06 & -26.09 & -6.28 & 1.00 & 0.039\\
+Emotion & 20.35 & 5.47 & 9.75 & 31.05 & 1.00 & 0.015\\
+FSIQ & -41.42 & 19.11 & -78.60 & -4.36 & 1.00 & 0.255\\
+Group x Congruency & 8.64 & 9.92 & -10.97 & 27.83 & 1.00 & 3.475\\
+Group x Prime & -6.75 & 9.94 & -26.23 & 12.64 & 1.00 & 3.931\\
+Prime x Congruency & 6.30 & 9.64 & -12.76 & 25.07 & 1.00 & 4.156\\
+Group x Emotion & -28.79 & 10.71 & -50.09 & -7.95 & 1.00 & 0.123\\
+Congruency x Emotion & 1.10 & 9.70 & -17.88 & 20.03 & 1.00 & 5.232\\
+Prime x Emotion & 12.70 & 9.66 & -6.34 & 31.78 & 1.00 & 2.202\\
+Group x Prime x Congruency & 1.44 & 18.36 & -34.82 & 37.11 & 1.00 & 2.692\\
+Group x Congruency x Emotion & 8.27 & 18.48 & -28.12 & 44.56 & 1.00 & 2.446\\
+Group x Prime x Emotion & 56.90 & 18.43 & 20.70 & 92.78 & 1.00 & 0.025\\
+Prime x Congruency x Emotion & -10.15 & 18.37 & -45.64 & 25.80 & 1.00 & 2.312\\
+Group x Prime x Congruency x Emotion & 3.08 & 31.31 & -57.82 & 64.40 & 1.00 & 1.626\\
+\bottomrule
+\end{tabular}
+
+}
+
+\end{threeparttable}
+\end{center}
+
+\end{table}
+
+\newpage
+
+\hypertarget{visual-data-exploration}{%
+\section{Visual data exploration}\label{visual-data-exploration}}
 
 \begin{figure}[!htb]
 
@@ -299,14 +712,6 @@ We fitted all models using the \texttt{brms} package (\protect\hyperlink{ref-R-b
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# recoding the binary predictors using contrasts ({-}0.5 vs. 0.5)}
-\NormalTok{df }\OtherTok{\textless{}{-}}\NormalTok{ df }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{mutate}\NormalTok{(}
-    \AttributeTok{GroupC =} \FunctionTok{ifelse}\NormalTok{(Group }\SpecialCharTok{==} \StringTok{"TD"}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{0.5}\NormalTok{, }\FloatTok{0.5}\NormalTok{),}
-    \AttributeTok{CongC =} \FunctionTok{ifelse}\NormalTok{(Congruency }\SpecialCharTok{==} \StringTok{"ICG"}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{0.5}\NormalTok{, }\FloatTok{0.5}\NormalTok{),}
-    \AttributeTok{PrimeC =} \FunctionTok{ifelse}\NormalTok{(Prime }\SpecialCharTok{==} \StringTok{"LSF"}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{0.5}\NormalTok{, }\FloatTok{0.5}\NormalTok{)}
-\NormalTok{    )}
-
 \CommentTok{\# defining the model formula (one "linear model" per parameter)}
 \NormalTok{formula }\OtherTok{\textless{}{-}} \FunctionTok{brmsformula}\NormalTok{(}
   \CommentTok{\# drift rate (delta)}
@@ -316,9 +721,8 @@ We fitted all models using the \texttt{brms} package (\protect\hyperlink{ref-R-b
   \CommentTok{\# non{-}decision time (tau)}
 \NormalTok{  ndt }\SpecialCharTok{\textasciitilde{}} \DecValTok{1} \SpecialCharTok{+}\NormalTok{ GroupC }\SpecialCharTok{+}\NormalTok{ (}\DecValTok{1} \SpecialCharTok{|}\NormalTok{ ID) }\SpecialCharTok{+}\NormalTok{ (}\DecValTok{1} \SpecialCharTok{|}\NormalTok{ Target),}
   \CommentTok{\# starting point or bias (beta)}
-\NormalTok{  bias }\SpecialCharTok{\textasciitilde{}} \DecValTok{1} \SpecialCharTok{+}\NormalTok{ GroupC }\SpecialCharTok{+}\NormalTok{ PrimeC }\SpecialCharTok{+}\NormalTok{ (}\DecValTok{1} \SpecialCharTok{|}\NormalTok{ ID) }\SpecialCharTok{+}\NormalTok{ (}\DecValTok{1} \SpecialCharTok{|}\NormalTok{ Target)}
+\NormalTok{  bias }\SpecialCharTok{\textasciitilde{}} \DecValTok{1} \SpecialCharTok{+}\NormalTok{ GroupC }\SpecialCharTok{*}\NormalTok{ PrimeC }\SpecialCharTok{+}\NormalTok{ (}\DecValTok{1} \SpecialCharTok{|}\NormalTok{ ID) }\SpecialCharTok{+}\NormalTok{ (}\DecValTok{1} \SpecialCharTok{|}\NormalTok{ Target)}
 \NormalTok{  )}
-
 \CommentTok{\# defining the priors}
 \NormalTok{priors }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}
   \CommentTok{\# priors for the intercepts}
@@ -344,9 +748,8 @@ We then fit this model below using the \texttt{brms::brm()} function. We run eig
 \NormalTok{epsilon }\OtherTok{\textless{}{-}} \FloatTok{0.1} \CommentTok{\# variability in starting value for the NDT intercept}
 \NormalTok{get\_init\_value }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(x) }\FunctionTok{list}\NormalTok{(}\AttributeTok{Intercept\_ndt =} \FunctionTok{rnorm}\NormalTok{(}\AttributeTok{n =} \DecValTok{1}\NormalTok{, }\AttributeTok{mean =}\NormalTok{ x, }\AttributeTok{sd =}\NormalTok{ epsilon) )}
 \NormalTok{inits\_drift }\OtherTok{\textless{}{-}} \FunctionTok{replicate}\NormalTok{(chains, }\FunctionTok{get\_init\_value}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{3}\NormalTok{), }\AttributeTok{simplify =} \ConstantTok{FALSE}\NormalTok{)}
-
 \CommentTok{\# fitting the model}
-\NormalTok{varying\_effects }\OtherTok{\textless{}{-}} \FunctionTok{brm}\NormalTok{(}
+\NormalTok{varying\_effects\_prime }\OtherTok{\textless{}{-}} \FunctionTok{brm}\NormalTok{(}
 \NormalTok{  formula, }
   \AttributeTok{data =}\NormalTok{ df,}
   \CommentTok{\# specifying the family and link functions for each parameter}
@@ -363,15 +766,15 @@ We then fit this model below using the \texttt{brms::brm()} function. We run eig
   \AttributeTok{chains =}\NormalTok{ chains, }\AttributeTok{cores =}\NormalTok{ chains,}
   \AttributeTok{control =} \FunctionTok{list}\NormalTok{(}\AttributeTok{adapt\_delta =} \FloatTok{0.99}\NormalTok{, }\AttributeTok{max\_treedepth =} \DecValTok{15}\NormalTok{),}
   \CommentTok{\# saves the model (as .rds) or loads it if it already exists}
-  \AttributeTok{file =} \StringTok{"models/wiener\_varying\_effects.rds"}\NormalTok{,}
+  \AttributeTok{file =} \StringTok{"models/wiener\_varying\_effects\_prime.rds"}\NormalTok{,}
   \CommentTok{\# needed for hypothesis testing}
   \AttributeTok{sample\_prior =} \ConstantTok{TRUE}
 \NormalTok{  )}
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{interpretation-of-the-results}{%
-\section{Interpretation of the results}\label{interpretation-of-the-results}}
+\hypertarget{ddm-interpretation-of-the-results}{%
+\section{DDM: Interpretation of the results}\label{ddm-interpretation-of-the-results}}
 
 \hypertarget{model-comparison}{%
 \subsection{Model comparison}\label{model-comparison}}
@@ -387,12 +790,12 @@ We first compared the previous model with a similar model including an effect of
 
 \tiny{
 
-\begin{tabular}{ccccccccc}
+\begin{tabular}{cccccccccc}
 \toprule
-model & \multicolumn{1}{c}{elpd\_diff} & \multicolumn{1}{c}{se\_diff} & \multicolumn{1}{c}{elpd\_waic} & \multicolumn{1}{c}{se\_elpd\_waic} & \multicolumn{1}{c}{p\_waic} & \multicolumn{1}{c}{se\_p\_waic} & \multicolumn{1}{c}{waic} & \multicolumn{1}{c}{se\_waic}\\
+model & \multicolumn{1}{c}{elpd\_diff} & \multicolumn{1}{c}{se\_diff} & \multicolumn{1}{c}{elpd\_waic} & \multicolumn{1}{c}{se\_elpd\_waic} & \multicolumn{1}{c}{p\_waic} & \multicolumn{1}{c}{se\_p\_waic} & \multicolumn{1}{c}{waic} & \multicolumn{1}{c}{se\_waic} & \multicolumn{1}{c}{weight}\\
 \midrule
-varying\_effects\_prime & 0.000 & 0.000 & 3,783.862 & 145.964 & 323.204 & 18.403 & -7,567.725 & 291.929\\
-varying\_effects & -15.555 & 6.502 & 3,768.307 & 145.929 & 319.389 & 18.198 & -7,536.614 & 291.859\\
+varying\_effects\_prime & 0.000 & 0.000 & 4,123.821 & 139.639 & 287.720 & 11.840 & -8,247.641 & 279.279 & 0.878\\
+varying\_effects & -16.991 & 6.742 & 4,106.830 & 139.704 & 284.992 & 11.778 & -8,213.659 & 279.409 & 0.122\\
 \bottomrule
 \end{tabular}
 
@@ -424,43 +827,43 @@ Now that we have fitted the model, we are left with the task of interpreting the
 ##          bs ~ 1 + GroupC + (1 | ID) + (1 | Target)
 ##          ndt ~ 1 + GroupC + (1 | ID) + (1 | Target)
 ##          bias ~ 1 + GroupC * PrimeC + (1 | ID) + (1 | Target)
-##    Data: df (Number of observations: 14492) 
+##    Data: df (Number of observations: 14420) 
 ## Samples: 8 chains, each with iter = 5000; warmup = 2000; thin = 1;
 ##          total post-warmup samples = 24000
 ## 
 ## Group-Level Effects: 
 ## ~ID (Number of levels: 61) 
 ##                    Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sd(Intercept)          0.82      0.08     0.68     1.00 1.00     7241    13084
-## sd(bs_Intercept)       0.19      0.02     0.15     0.24 1.00    10014    15312
-## sd(ndt_Intercept)      0.32      0.03     0.26     0.39 1.00     7655    13125
-## sd(bias_Intercept)     0.31      0.04     0.24     0.39 1.00    13151    17081
+## sd(Intercept)          0.78      0.08     0.64     0.95 1.00     6602    12714
+## sd(bs_Intercept)       0.22      0.02     0.17     0.27 1.00     8388    14065
+## sd(ndt_Intercept)      0.18      0.02     0.15     0.22 1.00     9810    13731
+## sd(bias_Intercept)     0.24      0.04     0.17     0.32 1.00    13276    15996
 ## 
 ## ~Target (Number of levels: 30) 
 ##                    Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sd(Intercept)          0.18      0.03     0.12     0.24 1.00    11483    16170
-## sd(bs_Intercept)       0.01      0.01     0.00     0.03 1.00     7197    12083
-## sd(ndt_Intercept)      0.01      0.01     0.00     0.03 1.00     6151     9336
-## sd(bias_Intercept)     0.04      0.02     0.00     0.08 1.00     5628    10621
+## sd(Intercept)          0.17      0.03     0.12     0.24 1.00    11928    17197
+## sd(bs_Intercept)       0.01      0.01     0.00     0.02 1.00     9457    13260
+## sd(ndt_Intercept)      0.01      0.01     0.00     0.02 1.00     5467     9913
+## sd(bias_Intercept)     0.05      0.02     0.01     0.10 1.00     4977     6742
 ## 
 ## Population-Level Effects: 
 ##                     Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## Intercept               3.10      0.12     2.88     3.33 1.00     4547     8071
-## bs_Intercept            0.74      0.03     0.69     0.79 1.00     7075    12080
-## ndt_Intercept          -1.35      0.04    -1.44    -1.27 1.00     3991     7318
-## bias_Intercept         -0.45      0.05    -0.54    -0.35 1.00    13231    16834
-## GroupC                 -0.01      0.22    -0.44     0.42 1.00     4694     8948
-## CongC                   0.31      0.03     0.26     0.36 1.00    49825    16747
-## PrimeC                 -0.11      0.04    -0.19    -0.03 1.00    30624    18693
-## GroupC:CongC           -0.09      0.05    -0.19     0.01 1.00    57078    17387
-## GroupC:PrimeC           0.01      0.08    -0.15     0.17 1.00    30888    19916
-## CongC:PrimeC            0.06      0.05    -0.04     0.16 1.00    52768    15435
-## GroupC:CongC:PrimeC    -0.03      0.10    -0.23     0.17 1.00    55246    17149
-## bs_GroupC               0.07      0.05    -0.04     0.17 1.00     7398    12011
-## ndt_GroupC              0.22      0.09     0.05     0.40 1.00     3938     7325
-## bias_GroupC             0.01      0.10    -0.18     0.20 1.00    13042    16540
-## bias_PrimeC             0.17      0.03     0.11     0.22 1.00    30301    19067
-## bias_GroupC:PrimeC      0.01      0.05    -0.10     0.12 1.00    28991    18548
+## Intercept               3.01      0.11     2.80     3.23 1.00     4403     8661
+## bs_Intercept            0.68      0.03     0.63     0.74 1.00     5326    10354
+## ndt_Intercept          -1.24      0.03    -1.29    -1.19 1.00     5319     9449
+## bias_Intercept         -0.34      0.04    -0.42    -0.26 1.00    15869    17506
+## GroupC                 -0.01      0.20    -0.42     0.38 1.00     4218     7608
+## CongC                   0.32      0.03     0.27     0.38 1.00    53999    15341
+## PrimeC                 -0.11      0.04    -0.19    -0.03 1.00    29665    20079
+## GroupC:CongC           -0.10      0.05    -0.20     0.00 1.00    51192    17442
+## GroupC:PrimeC           0.05      0.08    -0.12     0.21 1.00    32073    18817
+## CongC:PrimeC            0.06      0.05    -0.04     0.17 1.00    52638    17123
+## GroupC:CongC:PrimeC    -0.02      0.11    -0.23     0.19 1.00    48842    16606
+## bs_GroupC               0.08      0.06    -0.04     0.20 1.00     4849     9417
+## ndt_GroupC              0.18      0.05     0.08     0.28 1.00     4676     9571
+## bias_GroupC             0.01      0.08    -0.15     0.17 1.00    15741    17515
+## bias_PrimeC             0.16      0.03     0.11     0.21 1.00    29322    20146
+## bias_GroupC:PrimeC     -0.02      0.05    -0.13     0.08 1.00    31600    18534
 ## 
 ## Samples were drawn using sampling(NUTS). For each parameter, Bulk_ESS
 ## and Tail_ESS are effective sample size measures, and Rhat is the potential
@@ -472,8 +875,8 @@ We can retrieve the samples from the joint posterior distribution using the \tex
 \begin{Shaded}
 \begin{Highlighting}[]
 \CommentTok{\# retrieves posterior samples (for all parameters)}
+\NormalTok{varying\_effects\_prime }\OtherTok{\textless{}{-}} \FunctionTok{readRDS}\NormalTok{(}\AttributeTok{file =} \StringTok{"models/wiener\_varying\_effects\_prime.rds"}\NormalTok{)}
 \NormalTok{post }\OtherTok{\textless{}{-}} \FunctionTok{posterior\_samples}\NormalTok{(varying\_effects\_prime)}
-
 \CommentTok{\# the "post" object has 24.000 rows (number of posterior samples) and}
 \CommentTok{\# 396 columns (number of parameters)}
 \FunctionTok{dim}\NormalTok{(post)}
@@ -493,12 +896,12 @@ We can retrieve the samples from the joint posterior distribution using the \tex
 
 \begin{verbatim}
 ##   b_Intercept b_bs_Intercept b_ndt_Intercept b_bias_Intercept    b_GroupC
-## 1    3.065630      0.7638154       -1.326165       -0.4714715 -0.23604835
-## 2    3.079960      0.7269788       -1.288569       -0.4338481 -0.03456768
-## 3    3.220141      0.7994737       -1.341532       -0.4362217  0.16741494
-## 4    2.939337      0.7442077       -1.372380       -0.4278956 -0.15895763
-## 5    2.928774      0.7032227       -1.349029       -0.4666614 -0.14379284
-## 6    2.924545      0.7358593       -1.309704       -0.4481459 -0.03810808
+## 1    2.904270      0.6586814       -1.275385       -0.3706857 -0.11342708
+## 2    2.972417      0.6528011       -1.308810       -0.4090769  0.03222316
+## 3    2.868398      0.6492471       -1.292156       -0.2937770 -0.20980861
+## 4    3.050407      0.7175195       -1.257030       -0.3241950 -0.02612217
+## 5    3.105057      0.7030418       -1.215820       -0.2389826  0.01180252
+## 6    3.122955      0.6999282       -1.217508       -0.2114922 -0.03119975
 \end{verbatim}
 
 Which outputs a matrix with parameters of the model in columns and posterior samples in rows. Let's examine these results for each parameter in more details.
@@ -512,7 +915,6 @@ From there, we can study the marginal posterior distribution for each parameter 
 \begin{Highlighting}[]
 \CommentTok{\# retrieves the posterior samples for the average drift rate}
 \NormalTok{average\_drift }\OtherTok{\textless{}{-}}\NormalTok{ post}\SpecialCharTok{$}\NormalTok{b\_Intercept}
-
 \CommentTok{\# plotting it}
 \FunctionTok{plotPost}\NormalTok{(}
 \NormalTok{  average\_drift, }\AttributeTok{showMode =} \ConstantTok{TRUE}\NormalTok{,}
@@ -530,7 +932,7 @@ From there, we can study the marginal posterior distribution for each parameter 
 \caption{Posterior distribution of the intercept for the drift rate. The mode (i.e., the most probable value) and the 95\% credible interval are also displayed.}\label{fig:posterior-intercept-drift}
 \end{figure}
 
-Figure \ref{fig:posterior-intercept-drift} reveals (consistently with the summary displayed previously) that the most probable value for the intercept of the drift rate (given our model, the priors, and the data) is 3.103, and that there is a 95\% probability that the population value for this parameter lies in the interval ranging from 2.878 to 3.335. More interestingly, we can inspect the posterior distribution of the slopes for the effects of \texttt{Group}, \texttt{Prime}, and \texttt{Cong}.
+Figure \ref{fig:posterior-intercept-drift} reveals (consistently with the summary displayed previously) that the most probable value for the intercept of the drift rate (given our model, the priors, and the data) is 3.014, and that there is a 95\% probability that the population value for this parameter lies in the interval ranging from 2.799 to 3.234. More interestingly, we can inspect the posterior distribution of the slopes for the effects of \texttt{Group}, \texttt{Prime}, and \texttt{Cong}.
 
 \begin{figure}[!htb]
 
@@ -568,7 +970,7 @@ Recall that the boundary separation parameter can be interpreted as a measure of
 \caption{Posterior distribution of the intercept and the slope for Group for the boundary separation. The upper two distributions are the distributions of the intercept and the slope (on the linear scale). The lower two plots are the posterior distributions of the boundary separation parameter in the TD and ASD groups, respectively (on the linear scale).}\label{fig:posterior-bs}
 \end{figure}
 
-Therefore, we have to apply the inverse link function (i.e., \(\exp(\cdot)\)) to the parameter to be able to interpret it. Taking \(\exp(\beta_{1})\) gives the proportional change in the value of the boundary-separation parameter when we go from the TD group to the ASD group (see upper right panel of Figure \ref{fig:posterior-bs}). In our case, \(\exp(\beta_{1}) \approx\) 1.069, which means that going from TD to ASD leads to an increase of approximately 7\% in the value of the boundary-separation parameter. In other words, response caution seems higher in the ASD group (see lower right panel of Figure \ref{fig:posterior-bs}) than in the TD group (see lower left panel of Figure \ref{fig:posterior-bs}).
+Therefore, we have to apply the inverse link function (i.e., \(\exp(\cdot)\)) to the parameter to be able to interpret it. Taking \(\exp(\beta_{1})\) gives the proportional change in the value of the boundary-separation parameter when we go from the TD group to the ASD group (see upper right panel of Figure \ref{fig:posterior-bs}). In our case, \(\exp(\beta_{1}) \approx\) 1.083, which means that going from TD to ASD leads to an increase of approximately 7\% in the value of the boundary-separation parameter. In other words, response caution seems higher in the ASD group (see lower right panel of Figure \ref{fig:posterior-bs}) than in the TD group (see lower left panel of Figure \ref{fig:posterior-bs}).
 
 \hypertarget{starting-point}{%
 \subsubsection{Starting point}\label{starting-point}}
@@ -660,10 +1062,8 @@ We can test any arbitrary hypothesis using the \texttt{brms::hypothesis()} metho
 \begin{Shaded}
 \begin{Highlighting}[]
 \CommentTok{\# Plotting the Savage{-}Dickey Bayes factor}
-
 \CommentTok{\# testing whether the interaction Group * Congruency is equal to 0}
-\NormalTok{hyp }\OtherTok{\textless{}{-}} \FunctionTok{hypothesis}\NormalTok{(varying\_effects, }\StringTok{"GroupC:CongC = 0"}\NormalTok{)}
-
+\NormalTok{hyp }\OtherTok{\textless{}{-}} \FunctionTok{hypothesis}\NormalTok{(varying\_effects\_prime, }\StringTok{"GroupC:CongC = 0"}\NormalTok{)}
 \CommentTok{\# prints the output}
 \FunctionTok{print}\NormalTok{(hyp)}
 \end{Highlighting}
@@ -672,7 +1072,7 @@ We can test any arbitrary hypothesis using the \texttt{brms::hypothesis()} metho
 \begin{verbatim}
 ## Hypothesis Tests for class b:
 ##           Hypothesis Estimate Est.Error CI.Lower CI.Upper Evid.Ratio Post.Prob
-## 1 (GroupC:CongC) = 0    -0.09      0.05    -0.19     0.01       4.09       0.8
+## 1 (GroupC:CongC) = 0     -0.1      0.05     -0.2        0       3.16      0.76
 ##   Star
 ## 1     
 ## ---
@@ -720,18 +1120,18 @@ The resulting Bayes factor (called ``Evid. Ratio'' in the output) may be interpr
 \toprule
 Term & \multicolumn{1}{c}{Estimate} & \multicolumn{1}{c}{SE} & \multicolumn{1}{c}{Lower} & \multicolumn{1}{c}{Upper} & \multicolumn{1}{c}{Rhat} & \multicolumn{1}{c}{BF01}\\
 \midrule
-GroupC & -0.009 & 0.217 & -0.438 & 0.419 & 1.001 & 4.736\\
-CongC & 0.312 & 0.026 & 0.260 & 0.363 & 1.000 & 2.619*10\textasciicircum{}-16\\
-PrimeC & -0.108 & 0.041 & -0.190 & -0.027 & 1.000 & 0.797\\
-GroupC:CongC & -0.092 & 0.051 & -0.192 & 0.008 & 1.000 & 4.129\\
-GroupC:PrimeC & 0.012 & 0.082 & -0.150 & 0.173 & 1.000 & 12.403\\
-CongC:PrimeC & 0.063 & 0.051 & -0.037 & 0.164 & 1.001 & 9.511\\
-GroupC:CongC:PrimeC & -0.033 & 0.102 & -0.232 & 0.166 & 1.000 & 9.399\\
-bs\_GroupC & 0.067 & 0.054 & -0.040 & 0.171 & 1.000 & 8.368\\
-ndt\_GroupC & 0.224 & 0.087 & 0.053 & 0.397 & 1.003 & 0.464\\
-bias\_GroupC & 0.006 & 0.097 & -0.184 & 0.196 & 1.000 & 10.64\\
-bias\_PrimeC & 0.166 & 0.028 & 0.111 & 0.220 & 1.000 & 1.785*10\textasciicircum{}-16\\
-bias\_GroupC:PrimeC & 0.009 & 0.055 & -0.097 & 0.117 & 1.000 & 18.133\\
+GroupC & -0.012 & 0.204 & -0.416 & 0.383 & 1.002 & 4.872\\
+CongC & 0.325 & 0.027 & 0.273 & 0.378 & 1.000 & 5.533*10\textasciicircum{}-17\\
+PrimeC & -0.113 & 0.042 & -0.195 & -0.032 & 1.000 & 0.516\\
+GroupC:CongC & -0.099 & 0.053 & -0.201 & 0.003 & 1.000 & 3.162\\
+GroupC:PrimeC & 0.048 & 0.084 & -0.116 & 0.213 & 1.000 & 9.958\\
+CongC:PrimeC & 0.063 & 0.053 & -0.040 & 0.167 & 1.000 & 8.975\\
+GroupC:CongC:PrimeC & -0.022 & 0.106 & -0.233 & 0.187 & 1.001 & 9.153\\
+bs\_GroupC & 0.079 & 0.060 & -0.039 & 0.196 & 1.001 & 6.715\\
+ndt\_GroupC & 0.182 & 0.051 & 0.084 & 0.282 & 1.001 & 0.011\\
+bias\_GroupC & 0.012 & 0.081 & -0.147 & 0.169 & 1.001 & 12.058\\
+bias\_PrimeC & 0.161 & 0.027 & 0.109 & 0.213 & 1.000 & 1.618*10\textasciicircum{}-17\\
+bias\_GroupC:PrimeC & -0.022 & 0.054 & -0.127 & 0.084 & 1.000 & 17.235\\
 \bottomrule
 \addlinespace
 \end{tabular}
@@ -750,454 +1150,6 @@ bias\_GroupC:PrimeC & 0.009 & 0.055 & -0.097 & 0.117 & 1.000 & 18.133\\
 \end{table}
 
 Finally, Table \ref{tab:summary} reports the estimates and associated credible intervals and \(\text{BF01}\)s for all slopes in the hierarchical DDM. To sum up our results, these estimates suggest that \texttt{Cong} increasew the drift rate, while \texttt{Prime} seems to decrease it, which means that congruent (vs.~incongruent) and LSF (vs.~HSF) stimuli increase the ease of processing of the stimulus. The positive effect of \texttt{Group} on the non-decision time parameter suggests non-decision related processes (such as the stimulus processing or motor processes) are different according to the group (i.e., they take longer in the ASD group than in the TD group). Finally, the effect of \texttt{Prime} on the starting point suggests that HSF (vs.~LSF) primes were associated with an a priori ``bias'' towards accurate responses.
-
-\hypertarget{model-comparison-for-the-response-time-analysis}{%
-\section{Model comparison for the response time analysis}\label{model-comparison-for-the-response-time-analysis}}
-
-The first analysis was conducted on our data without:\\
-- participants with accuracy \textless{} 50 \% (1 autistic participant)\\
-- trials with RT \textless{} 300 ms (1,50 \%)
-
-\hypertarget{inclusion-of-different-predictors}{%
-\subsection{Inclusion of different predictors}\label{inclusion-of-different-predictors}}
-
-We first compared the three following models of increasing complexity and we kept the best one (i.e., the model with the lowest LOOIC - Leave-on-out cross validation information criterion - and the highest weight):
-
-\begin{itemize}
-\item
-  BMgcp : RT \textasciitilde{} 1 + GroupC * PrimeC * CongC + (1 + CongC * PrimeC \textbar\textbar{} ID) + (1 +
-  GroupC * PrimeC * CongC \textbar\textbar{} Target)
-\item
-  BMgcpe : RT \textasciitilde{} 1 + GroupC * PrimeC * CongC * EmoC + (1 + CongC * PrimeC \emph{
-  EmoC \textbar\textbar{} ID) + (1 + GroupC } PrimeC * CongC * EmoC \textbar\textbar{} Target)
-\item
-  BMgcpes : RT \textasciitilde{} 1 + GroupC * PrimeC * CongC * EmoC * SexC + (1 + CongC * PrimeC * EmoC \textbar\textbar{} ID) + (1 + GroupC * PrimeC * CongC * EmoC * SexC \textbar\textbar{} Target)
-\item
-  BMgcpesP : RT \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC + SexC + SexC:GroupC + (1 + CongC * PrimeC * EmoC \textbar\textbar{} ID) + (1 + GroupC * CongC * PrimeC *EmoC + SexC + SexC:GroupC\textbar\textbar{} Target)
-\end{itemize}
-
-\begin{table}[htb]
-
-\begin{center}
-\begin{threeparttable}
-
-\caption{\label{tab:modelComp1RT}Expected log pointise predictive density (ELPD) and LOOIC for each BMLM on RT.}
-
-\tiny{
-
-\begin{tabular}{cccccccccc}
-\toprule
-model & \multicolumn{1}{c}{elpd\_diff} & \multicolumn{1}{c}{se\_diff} & \multicolumn{1}{c}{elpd\_loo} & \multicolumn{1}{c}{se\_elpd\_loo} & \multicolumn{1}{c}{p\_loo} & \multicolumn{1}{c}{se\_p\_loo} & \multicolumn{1}{c}{looic} & \multicolumn{1}{c}{se\_looic} & \multicolumn{1}{c}{Model\_Weights}\\
-\midrule
-BMgcpe & 0.000 & 0.000 & -92,727.743 & 122.793 & 282.308 & 8.677 & 185,455.485 & 245.587 & 0.745\\
-BMgcpesP & -1.408 & 0.755 & -92,729.151 & 122.819 & 288.954 & 8.851 & 185,458.301 & 245.638 & 0.182\\
-BMgcpes & -2.323 & 4.451 & -92,730.066 & 123.017 & 326.123 & 9.920 & 185,460.131 & 246.034 & 0.073\\
-BMgcp & -180.740 & 21.709 & -92,908.483 & 122.026 & 160.269 & 5.267 & 185,816.965 & 244.051 & 0.000\\
-\bottomrule
-\end{tabular}
-
-}
-
-\end{threeparttable}
-\end{center}
-
-\end{table}
-
-As reported on \emph{Table \ref{tab:modelComp1RT}}, \texttt{BMgcpe} appeared to be the best model compared with models without emotion or with sex (full model or parcimonious model). Hence, we kept this model and then added covariates to this model.
-
-\hypertarget{model-with-covariates}{%
-\subsection{Model with covariates}\label{model-with-covariates}}
-
-As preregistered, we added some covariates in the model and again, we kept the best one after model comparison. We included either PIQ or FSIQ and AQ as our two groups differed on these variables.
-
-We compared the following models:
-
-\begin{itemize}
-\item
-  BMgcpe : RT \textasciitilde{} 1 + GroupC * PrimeC * CongC * EmoC + (1 + CongC * PrimeC \emph{
-  EmoC \textbar\textbar{} ID) + (1 + GroupC } PrimeC * CongC * EmoC \textbar\textbar{} Target)
-\item
-  BMf : RT \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC + FSIQc + (1 + CongC * PrimeC * EmoC \textbar\textbar{} ID) + (1 + GroupC * CongC * PrimeC * EmoC \textbar\textbar{} Target)
-\item
-  BMa : RT \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC + AQc + (1 + CongC * PrimeC * EmoC \textbar\textbar{} ID) + (1 + GroupC * CongC * PrimeC *EmoC \textbar\textbar{} Target)
-\item
-  BMp : RT \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC + PIQc + (1 + CongC * PrimeC * EmoC \textbar\textbar{} ID) + (1 + GroupC * CongC * PrimeC *EmoC \textbar\textbar{} Target)
-\item
-  BMfa : RT \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC + FSIQc + AQc + (1 + CongC * PrimeC * EmoC \textbar\textbar{} ID) + (1 + GroupC * CongC * PrimeC *EmoC \textbar\textbar{} Target)
-\item
-  BMpa : RT \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC + PIQc + AQc + (1 + CongC * PrimeC * EmoC \textbar\textbar{} ID) + (1 + GroupC * CongC * PrimeC *EmoC \textbar\textbar{} Target)
-\end{itemize}
-
-\begin{table}[htb]
-
-\begin{center}
-\begin{threeparttable}
-
-\caption{\label{tab:modelComp2RT}Expected log pointise predictive density (ELPD) and LOOIC for each of the four BMLMs on RT, with covariates}
-
-\tiny{
-
-\begin{tabular}{cccccccccc}
-\toprule
-model & \multicolumn{1}{c}{elpd\_diff} & \multicolumn{1}{c}{se\_diff} & \multicolumn{1}{c}{elpd\_waic} & \multicolumn{1}{c}{se\_elpd\_waic} & \multicolumn{1}{c}{p\_waic} & \multicolumn{1}{c}{se\_p\_waic} & \multicolumn{1}{c}{waic} & \multicolumn{1}{c}{se\_waic} & \multicolumn{1}{c}{Model\_Weights}\\
-\midrule
-BMgcpe & 0.000 & 0.000 & -92,726.667 & 122.773 & 281.232 & 8.621 & 185,453.334 & 245.545 & 0.292\\
-BMpa & -0.011 & 0.268 & -92,726.678 & 122.772 & 281.177 & 8.577 & 185,453.356 & 245.543 & 0.278\\
-BMf & -0.607 & 0.348 & -92,727.274 & 122.797 & 281.521 & 8.645 & 185,454.548 & 245.594 & 0.161\\
-BMa & -0.836 & 0.251 & -92,727.503 & 122.775 & 281.669 & 8.625 & 185,455.006 & 245.549 & 0.126\\
-BMfa & -1.238 & 0.305 & -92,727.905 & 122.795 & 281.247 & 8.604 & 185,455.810 & 245.590 & 0.078\\
-BMp & -1.430 & 0.284 & -92,728.097 & 122.804 & 282.796 & 8.688 & 185,456.194 & 245.608 & 0.064\\
-\bottomrule
-\end{tabular}
-
-}
-
-\end{threeparttable}
-\end{center}
-
-\end{table}
-
-\begin{table}[htb]
-
-\begin{center}
-\begin{threeparttable}
-
-\caption{\label{tab:summaryBMgcpe}Estimates and BF01 from the BMLM on RT.}
-
-\small{
-
-\begin{tabular}{ccccccc}
-\toprule
-Predictors & \multicolumn{1}{c}{Estimate} & \multicolumn{1}{c}{SE} & \multicolumn{1}{c}{Lower} & \multicolumn{1}{c}{Upper} & \multicolumn{1}{c}{Rhat} & \multicolumn{1}{c}{BF01}\\
-\midrule
-Intercept & 696.93 & 13.69 & 670.39 & 724.09 & 1.00 & NA\\
-Group & 66.78 & 24.40 & 16.93 & 113.38 & 1.00 & 0.069\\
-Prime & -12.91 & 2.97 & -18.70 & -6.93 & 1.00 & 1.277*10\textasciicircum{}-4\\
-Congruency & -14.78 & 2.88 & -20.64 & -9.17 & 1.00 & 1.481*10\textasciicircum{}-4\\
-Emotion & 18.90 & 6.73 & 5.59 & 31.99 & 1.00 & 0.194\\
-Group x Prime & -1.30 & 5.84 & -12.74 & 10.12 & 1.00 & 8.487\\
-Group x Congruency & -2.42 & 5.43 & -13.10 & 8.15 & 1.00 & 8.386\\
-Prime x Congruency & 4.53 & 4.54 & -4.36 & 13.56 & 1.00 & 6.479\\
-Group x Emotion & -8.04 & 9.48 & -26.65 & 10.53 & 1.00 & 3.732\\
-Prime x Emotion & 3.70 & 4.59 & -5.32 & 12.66 & 1.00 & 8.184\\
-Congruency x Emotion & -4.13 & 4.60 & -13.22 & 4.80 & 1.00 & 7.517\\
-Group x Prime x Congruency & 2.28 & 8.63 & -14.63 & 19.04 & 1.00 & 5.494\\
-Group x Prime x Emotion & 21.19 & 9.23 & 3.08 & 39.21 & 1.00 & 0.403\\
-Group x Congruency x Emotion & 6.08 & 9.11 & -11.87 & 23.76 & 1.00 & 4.594\\
-Prime x Congruency x Emotion & -8.07 & 9.15 & -26.34 & 9.98 & 1.00 & 3.671\\
-Group x Prime x Congruency x Emotion & 7.98 & 17.00 & -25.18 & 41.78 & 1.00 & 2.666\\
-\bottomrule
-\addlinespace
-\end{tabular}
-
-}
-
-\begin{tablenotes}[para]
-\normalsize{\textit{Note.} For each predictor, the first two columns represent the estimated
-    most probable value for the slope and its standard error (SE). The 'Lower' and 'Upper' are the bounds of the 95\% CrI, whereas the 'Rhat' column reports the Gelman-Rubin statistic regarding the convergence. The last column reports the Bayes factor in favour of the null hypothesis (BF01).}
-\end{tablenotes}
-
-\end{threeparttable}
-\end{center}
-
-\end{table}
-
-The model without any covariates appeared to be the best model (see \emph{Table \ref{tab:modelComp2RT}}), despite the model with AQ and PIQ seems to be almost equally good. The outcome of these two models are very similar and we kept the more parcimonious (note that there is no evidence of an effect of AQ and PIQ on our data when looking at the output of the model with covariates).
-We checked the quality of this model with posterior predictive checking, which seemed to be good (\emph{Figure 4} of the main paper associated to this supplementary material). The results of this BMLM are summarized in \emph{Table \ref{tab:summaryBMgcpe}} and are described in the paper.
-
-\newpage
-
-\hypertarget{removing-outliers}{%
-\section{Removing outliers}\label{removing-outliers}}
-
-We also ran our model removing participants who were outliers (results below Quartile1 -- 1.5 * InterQuartile range or above Quartile3 +1.5 * InterQuartile Rang) on at least half of the condition for accuracy or for RT (3 ASD - 2 females, 1 male - and 3 TD - 2 females, 1 male, as preregistered on \url{https://osf.io/345jv}.
-
-All relevant statistics regarding groups description are set out in \emph{Table \ref{tab:demoWO}}.
-
-\hypertarget{demographical-data}{%
-\subsection{Demographical data}\label{demographical-data}}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{apa\_table}\NormalTok{(}
-\NormalTok{    demoWO\_stat,}
-    \AttributeTok{placement =} \StringTok{"htb"}\NormalTok{,}
-    \AttributeTok{align =} \FunctionTok{c}\NormalTok{(}\StringTok{"c"}\NormalTok{, }\StringTok{"c"}\NormalTok{),}
-    \AttributeTok{caption =} \StringTok{"Subject demographics – Means (M), standard deviations (SD) and BF01."}\NormalTok{,}
-    \AttributeTok{note =} \StringTok{"*FSIQ = Full Scale Intelligence Quotient; VIQ = Verbal Intelligence Quotient; PIQ = Performance Intelligence Quotient ; AQ = Autism{-}Spectrum Quotient."}\NormalTok{,}
-    \CommentTok{\#small = FALSE,}
-    \AttributeTok{escape =} \ConstantTok{TRUE}
-\NormalTok{    )}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{table}[htb]
-
-\begin{center}
-\begin{threeparttable}
-
-\caption{\label{tab:demoWO}Subject demographics – Means (M), standard deviations (SD) and BF01.}
-
-\begin{tabular}{cccc}
-\toprule
- & \multicolumn{1}{c}{Group: ASD (N = 24)} & \multicolumn{1}{c}{Group: TD (N = 31)} & \multicolumn{1}{c}{BF01}\\
-\midrule
-Age & 33.08 (8.37) & 31.68 (7.29) & 3.04\\
-Education & 14.79 (2.69) & 15.90 (2.75) & 1.445\\
-FSIQ & 126.42 (13.92) & 113.84 (15.15) & 0.071\\
-VIQ & 128.88 (10.63) & 120.52 (14.71) & 0.394\\
-PIQ & 118.08 (13.43) & 104.06 (15.14) & 0.026\\
-AQ & 36.17 (7.11) & 15.26 (6.24) & 1.026*10\textasciicircum{}-13\\
-Reading & 0.10 (0.88) & -0.07 (0.55) & 2.61\\
-Stroop Effect & 0.45 (0.81) & 0.55 (0.77) & 3.306\\
-\bottomrule
-\addlinespace
-\end{tabular}
-
-\begin{tablenotes}[para]
-\normalsize{\textit{Note.} *FSIQ = Full Scale Intelligence Quotient; VIQ = Verbal Intelligence Quotient; PIQ = Performance Intelligence Quotient ; AQ = Autism-Spectrum Quotient.}
-\end{tablenotes}
-
-\end{threeparttable}
-\end{center}
-
-\end{table}
-
-\hypertarget{posterior-predictive-check}{%
-\subsection{Posterior predictive check}\label{posterior-predictive-check}}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{load}\NormalTok{(}\StringTok{"models/BMwo.rda"}\NormalTok{)}
-\FunctionTok{pp\_check}\NormalTok{(BMwo, }\AttributeTok{resp =} \StringTok{"RT"}\NormalTok{, }\AttributeTok{nsamples =} \FloatTok{1e2}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{theme\_minimal}\NormalTok{(}\AttributeTok{base\_size =} \DecValTok{11}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{theme}\NormalTok{(}\AttributeTok{legend.position =} \StringTok{"none"}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{xlab}\NormalTok{(}\StringTok{"Response Time (in ms)"}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{ylab}\NormalTok{(}\StringTok{"Density"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{figure}[htb]
-
-{\centering \includegraphics[width=\textwidth]{supplementary_materials_files/figure-latex/ppcheckBMwo-1} 
-
-}
-
-\caption{Posterior predictive checking for the BMLM without outliers.}\label{fig:ppcheckBMwo}
-\end{figure}
-
-\newpage
-
-\hypertarget{results}{%
-\subsection{Results}\label{results}}
-
-\begin{table}[htb]
-
-\begin{center}
-\begin{threeparttable}
-
-\caption{\label{tab:summaryBMwo}Estimates from the ExGaussian BMLM on RT without outliers.}
-
-\small{
-
-\begin{tabular}{ccccccc}
-\toprule
-Predictors & \multicolumn{1}{c}{Estimate} & \multicolumn{1}{c}{SE} & \multicolumn{1}{c}{Lower} & \multicolumn{1}{c}{Upper} & \multicolumn{1}{c}{Rhat} & \multicolumn{1}{c}{BF01}\\
-\midrule
-Intercept & 667.48 & 12.51 & 643.00 & 692.00 & 1.00 & NA\\
-Group & 52.29 & 22.12 & 7.77 & 94.71 & 1.00 & 0.16\\
-Prime & -11.19 & 2.71 & -16.48 & -5.87 & 1.00 & 0.01\\
-Congruency & -11.43 & 2.66 & -16.72 & -6.15 & 1.00 & 0.01\\
-Emotion & 18.02 & 5.99 & 6.27 & 29.70 & 1.00 & 0.11\\
-Group x Prime & 1.22 & 5.11 & -8.76 & 11.18 & 1.00 & 9.91\\
-Group x Congruency & 0.73 & 4.74 & -8.65 & 10.06 & 1.00 & 10.62\\
-Prime x Congruency & 6.09 & 4.64 & -3.08 & 15.26 & 1.00 & 4.70\\
-Group x Emotion & -11.31 & 8.34 & -27.51 & 5.31 & 1.00 & 2.51\\
-Prime x Emotion & 1.02 & 4.47 & -7.77 & 9.85 & 1.00 & 11.74\\
-Congruency x Emotion & -0.40 & 4.55 & -9.35 & 8.46 & 1.00 & 11.19\\
-Group x Prime x Congruency & 9.28 & 8.79 & -8.12 & 26.42 & 1.00 & 3.33\\
-Group x Prime x Emotion & 24.83 & 8.96 & 7.31 & 42.21 & 1.00 & 0.15\\
-Group x Congruency x Emotion & 11.32 & 8.84 & -5.88 & 28.78 & 1.00 & 2.63\\
-Prime x Congruency x Emotion & -5.08 & 9.30 & -23.30 & 13.47 & 1.00 & 4.80\\
-Group x Prime x Congruency x Emotion & 17.19 & 17.56 & -17.54 & 51.71 & 1.00 & 1.86\\
-\bottomrule
-\end{tabular}
-
-}
-
-\end{threeparttable}
-\end{center}
-
-\end{table}
-
-\newpage
-
-\hypertarget{analysis-on-inverse-efficiency-score-ies}{%
-\section{Analysis on Inverse Efficiency Score (IES)}\label{analysis-on-inverse-efficiency-score-ies}}
-
-As preregistered, we also runned models on the IES (= Response Time/Accuracy), in order to take into account accuracy.
-
-\hypertarget{inclusion-of-different-predictors-1}{%
-\subsection{Inclusion of different predictors}\label{inclusion-of-different-predictors-1}}
-
-We compared the 3 following models :
-
-\begin{itemize}
-\item
-  IBMgcp : IES \textasciitilde{} 1 + GroupC * CongC * PrimeC + (1 \textbar{} ID)
-\item
-  IBMgcpe: IES \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC+ (1 \textbar{} ID)
-\item
-  IBMgcpes : IES \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC * SexC + (1 \textbar{} ID)
-\item
-  IBMgcpesP: IES \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC + SexC + SexC : EmoC + (1 \textbar{} ID)
-\end{itemize}
-
-\begin{table}[htb]
-
-\begin{center}
-\begin{threeparttable}
-
-\caption{\label{tab:modelCompIES1}Expected log pointise predictive density (ELPD) and LOOIC for each of the three BMLM on IES.}
-
-\tiny{
-
-\begin{tabular}{cccccccccc}
-\toprule
-model & \multicolumn{1}{c}{elpd\_diff} & \multicolumn{1}{c}{se\_diff} & \multicolumn{1}{c}{elpd\_loo} & \multicolumn{1}{c}{se\_elpd\_loo} & \multicolumn{1}{c}{p\_loo} & \multicolumn{1}{c}{se\_p\_loo} & \multicolumn{1}{c}{looic} & \multicolumn{1}{c}{se\_looic} & \multicolumn{1}{c}{Model\_Weights}\\
-\midrule
-IBMgcpe & 0.000 & 0.000 & -2,798.330 & 28.402 & 87.995 & 13.260 & 5,596.661 & 56.805 & 0.396\\
-IBMgcpesP & -0.147 & 0.283 & -2,798.478 & 28.456 & 88.162 & 13.335 & 5,596.955 & 56.912 & 0.593\\
-IBMgcpes & -5.391 & 3.453 & -2,803.722 & 28.166 & 99.316 & 13.894 & 5,607.443 & 56.332 & 0.011\\
-IBMgcp & -11.643 & 6.458 & -2,809.973 & 27.255 & 79.990 & 11.494 & 5,619.946 & 54.510 & 0.000\\
-\bottomrule
-\end{tabular}
-
-}
-
-\end{threeparttable}
-\end{center}
-
-\end{table}
-
-The model \texttt{IBMgcpe} seemed to be the best one (see \emph{Table \ref{tab:modelCompIES1}}) even if the parsimonious model included sex is quite good as well.
-
-\hypertarget{inclusion-of-covariates}{%
-\subsection{Inclusion of covariates}\label{inclusion-of-covariates}}
-
-We then included covariates in the model best model. We compared the following models:
-
-\begin{itemize}
-\item
-  IBMfa : IES \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC + FSIQ + AQ + (1 \textbar{} ID)
-\item
-  IBMf : IES \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC + FSIQ +(1 \textbar{} ID)
-\item
-  IBMa : IES \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC + AQ +(1 \textbar{} ID)
-\item
-  IBMpa : IES \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC + PIQ + AQ + (1 \textbar{} ID)
-\item
-  IBMp : IES \textasciitilde{} 1 + GroupC * CongC * PrimeC * EmoC + PIQ + (1 \textbar{} ID)
-\end{itemize}
-
-\begin{table}[htb]
-
-\begin{center}
-\begin{threeparttable}
-
-\caption{\label{tab:modelCompIES2}Expected log pointise predictive density (ELPD) and LOOIC for each of the four BMLM on IES, with covariates.}
-
-\tiny{
-
-\begin{tabular}{cccccccccc}
-\toprule
-model & \multicolumn{1}{c}{elpd\_diff} & \multicolumn{1}{c}{se\_diff} & \multicolumn{1}{c}{elpd\_loo} & \multicolumn{1}{c}{se\_elpd\_loo} & \multicolumn{1}{c}{p\_loo} & \multicolumn{1}{c}{se\_p\_loo} & \multicolumn{1}{c}{looic} & \multicolumn{1}{c}{se\_looic} & \multicolumn{1}{c}{Model\_Weights}\\
-\midrule
-IBMf & 0.000 & 0.000 & -2,796.274 & 27.783 & 85.749 & 11.867 & 5,592.549 & 55.565 & 0.222\\
-IBMa & -1.287 & 0.820 & -2,797.561 & 28.081 & 87.203 & 12.582 & 5,595.122 & 56.161 & 0.196\\
-IBMpa & -1.311 & 1.159 & -2,797.586 & 28.189 & 87.227 & 12.787 & 5,595.171 & 56.378 & 0.191\\
-IBMp & -1.399 & 1.242 & -2,797.673 & 28.225 & 87.259 & 12.851 & 5,595.346 & 56.451 & 0.175\\
-IBMfa & -1.742 & 1.374 & -2,798.016 & 28.362 & 87.495 & 12.993 & 5,596.032 & 56.724 & 0.124\\
-IBMgcpe & -2.056 & 1.509 & -2,798.330 & 28.402 & 87.995 & 13.260 & 5,596.661 & 56.805 & 0.091\\
-\bottomrule
-\end{tabular}
-
-}
-
-\end{threeparttable}
-\end{center}
-
-\end{table}
-
-The model \texttt{IBMf}, with FSIQ as a covariate, appear to be the best model (see \emph{Table \ref{tab:modelCompIES2}}). We checked the validity of this model with posterior predictive check (\emph{Figure 2}), which appeared to be good.
-
-\hypertarget{posterior-predictive-check-1}{%
-\subsection{Posterior predictive check}\label{posterior-predictive-check-1}}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{load}\NormalTok{(}\StringTok{"models/IBMf.rda"}\NormalTok{)}
-\FunctionTok{pp\_check}\NormalTok{(IBMf, }\AttributeTok{resp =} \StringTok{"IES"}\NormalTok{, }\AttributeTok{nsamples =} \FloatTok{1e2}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{theme\_minimal}\NormalTok{(}\AttributeTok{base\_size =} \DecValTok{11}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{theme}\NormalTok{(}\AttributeTok{legend.position =} \StringTok{"none"}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{xlab}\NormalTok{(}\StringTok{"IES"}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{ylab}\NormalTok{(}\StringTok{"Density"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{figure}[!h]
-
-{\centering \includegraphics[width=\textwidth]{supplementary_materials_files/figure-latex/ppcheckIBMf-1} 
-
-}
-
-\caption{Posterior predictive checking for BMLM concerning the IES.}\label{fig:ppcheckIBMf}
-\end{figure}
-
-\hypertarget{results-1}{%
-\subsection{Results}\label{results-1}}
-
-\begin{table}[tbp]
-
-\begin{center}
-\begin{threeparttable}
-
-\caption{\label{tab:summaryIBMf}Estimates from the ExGaussian BMLM concerning the IES.}
-
-\small{
-
-\begin{tabular}{ccccccc}
-\toprule
-Predictors & \multicolumn{1}{c}{Estimate} & \multicolumn{1}{c}{SE} & \multicolumn{1}{c}{Lower} & \multicolumn{1}{c}{Upper} & \multicolumn{1}{c}{Rhat} & \multicolumn{1}{c}{BF01}\\
-\midrule
-Intercept & 730.19 & 19.53 & 691.32 & 767.97 & 1.00 & NA\\
-Group & 83.46 & 31.59 & 20.32 & 144.61 & 1.00 & 0.061\\
-Congruency & -36.86 & 5.55 & -47.93 & -26.20 & 1.00 & 5.523*10\textasciicircum{}-17\\
-Prime & -16.09 & 5.06 & -26.09 & -6.28 & 1.00 & 0.039\\
-Emotion & 20.35 & 5.47 & 9.75 & 31.05 & 1.00 & 0.015\\
-FSIQ & -41.42 & 19.11 & -78.60 & -4.36 & 1.00 & 0.255\\
-Group x Congruency & 8.64 & 9.92 & -10.97 & 27.83 & 1.00 & 3.475\\
-Group x Prime & -6.75 & 9.94 & -26.23 & 12.64 & 1.00 & 3.931\\
-Prime x Congruency & 6.30 & 9.64 & -12.76 & 25.07 & 1.00 & 4.156\\
-Group x Emotion & -28.79 & 10.71 & -50.09 & -7.95 & 1.00 & 0.123\\
-Congruency x Emotion & 1.10 & 9.70 & -17.88 & 20.03 & 1.00 & 5.232\\
-Prime x Emotion & 12.70 & 9.66 & -6.34 & 31.78 & 1.00 & 2.202\\
-Group x Prime x Congruency & 1.44 & 18.36 & -34.82 & 37.11 & 1.00 & 2.692\\
-Group x Congruency x Emotion & 8.27 & 18.48 & -28.12 & 44.56 & 1.00 & 2.446\\
-Group x Prime x Emotion & 56.90 & 18.43 & 20.70 & 92.78 & 1.00 & 0.025\\
-Prime x Congruency x Emotion & -10.15 & 18.37 & -45.64 & 25.80 & 1.00 & 2.312\\
-Group x Prime x Congruency x Emotion & 3.08 & 31.31 & -57.82 & 64.40 & 1.00 & 1.626\\
-\bottomrule
-\end{tabular}
-
-}
-
-\end{threeparttable}
-\end{center}
-
-\end{table}
-
-\newpage
 
 \hypertarget{acknowledgments}{%
 \section{Acknowledgments}\label{acknowledgments}}
