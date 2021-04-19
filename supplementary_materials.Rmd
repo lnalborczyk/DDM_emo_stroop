@@ -1,5 +1,5 @@
 ---
-title: "Supplementary materials to 'Effect of spatially filtered primes on emotion categorization with an interference context in autism and typically developing'"
+title: "Supplementary materials to 'High spatial frequency information in primes hastens happy faces categorization in autistic adults.'"
 shorttitle: "Supplementary Materials"
 author: 
   - name          : Adeline Lacroix
@@ -8,34 +8,39 @@ author:
     address       : Laboratoire de Psychologie et NeuroCognition, Univ. Grenoble Alpes, 1251 avenue centrale, Grenoble, France
     email         : adeline.lacroix@univ-grenoble-alpes.fr
   - name          : Ladislas Nalborczyk
-    affiliation   : 2
+    affiliation   : "2,3"
   - name          : Frédéric Dutheil
-    affiliation   : 3
+    affiliation   : 4
   - name          : Klara Kovarski
-    affiliation   : "4,5"
+    affiliation   : "5,6"
   - name          : Sylvie Chokron
-    affiliation   : "4,5"
+    affiliation   : "5,6"
   - name          : Marta Garrido
-    affiliation   : 6
+    affiliation   : "7,8"
   - name          : Marie Gomot 
-    affiliation   : 7
+    affiliation   : 9
   - name          : Martial Mermillod
     affiliation   : 1
 affiliation:
   - id: 1
     institution: LPNC, Univ. Grenoble Alpes, Univ. Savoie Mont Blanc, CNRS, 38000, Grenoble, France
   - id: 2
-    institution: GIPSA-lab, CNRS, Univ. Grenoble Alpes, 38000, Grenoble, France.
+    institution: Aix Marseille Univ, CNRS, LPC, Marseille, France.
   - id: 3
-    institution: Université Clermont Auvergne, CNRS, LaPSCo, CHU Clermont-Ferrand, WittyFit, F-63000 Clermont-Ferrand, France
+    institution: Aix Marseille Univ, CNRS, LNC, Marseille, France.
   - id: 4
-    institution: Hôpital Fondation Ophtalmologique A. de Rothschild, Paris, France.
+    institution: Université Clermont Auvergne, CNRS, LaPSCo, CHU Clermont-Ferrand, WittyFit, F-63000 Clermont-Ferrand, France
   - id: 5
-    institution: Université de Paris, INCC UMR 8002, CNRS, F-75006 Paris, France 
+    institution: Hôpital Fondation Ophtalmologique A. de Rothschild, Paris, France.
   - id: 6
-    institution: Cognitive Neuroscience and Computational Psychiatry Lab, Melbourne School of Psychological Sciences, The University of Melbourne, Australia
+    institution: Université de Paris, INCC UMR 8002, CNRS, F-75006 Paris, France.
   - id: 7
-    institution: UMR 1253 iBrain, Université de Tours, Inserm, Tours, France
+    institution: Cognitive Neuroscience and Computational Psychiatry Lab, Melbourne School of Psychological Sciences, The University of Melbourne, Australia.
+  - id: 8
+    institution: Australian Research Council Centre of Excellence for Integrative Brain Function, Australia.
+  - id: 9
+    institution: UMR 1253 iBrain, Université de Tours, Inserm, Tours, France.
+
 bibliography: [bib/emo_stroop_diffusion.bib, bib/r-references.bib]
 figsintext: true
 class: doc
@@ -110,7 +115,6 @@ knitr::opts_chunk$set(
   fig.align = "center", dev = "pdf",
   out.width = "75%", fig.pos = "!htb"
   )
-
 changeSciNot <- function(n) {
   
   output <- format(n, digits = 4, scientific = TRUE)
@@ -122,13 +126,14 @@ changeSciNot <- function(n) {
 }
 ```
 
+Parts 1, 2 and 3 of this document correspond to planned analyses (e.g., table of results, complementary analyses without outliers). Parts 4, 5 and 6 correspond to exploratory analyses with Drift Diffusion Models. All the procedure used for these analyses is detailed and can be used as a tutorial.
+
 # Model comparison for the response time analysis
 
 ```{r data-import, include = FALSE}
 #df1 <- read.csv ("data/df1.csv", header = TRUE, sep = ",")[-1]
 DF <- read.csv ("data/DF.csv", header = TRUE, sep = ",") 
 demo <-read.csv ("data/demo.csv", header = TRUE, sep= ";") 
-
 ```
 
 ```{r dataPrep, include = FALSE}
@@ -189,9 +194,6 @@ demoTot <-
   dplyr::rename (FSIQ = QIT)  # 61 obs
 ```
 
-The first analysis was conducted on our data without:  
-- participants with accuracy < 50 % (1 autistic participant)  
-- trials with RT < 300 ms (1,50 %)  
 
 ## Inclusion of different predictors
 We first compared the three following models of increasing complexity and we kept the best one (i.e., the model with the lowest LOOIC - Leave-one-out cross validation information criterion - and the highest weight):  
@@ -475,16 +477,17 @@ EmoC || ID) + (1 + GroupC * PrimeC * CongC * EmoC || Target)
 #   criterion = "waic"
 #  )
 # p_waic greater than 0.4 => recommad using loo but ok because small
-# LOOCVfullRT2w <- loo_compare(
+# LOOCVfullRT2 <- loo_compare(
 #   BMfa, BMf, BMa, BMpa,BMp, BMgcpe,
 #   criterion = "loo"
 #  )
 # 
 # saveRDS(LOOCVfullRT2, file = "models/ModCompFullRT2.rds")
-# # 
+# # # 
 # load("models/BMfa.rda")
 # load("models/BMa.rda")
 # load("models/BMpa.rda")
+# load("models/BMp.rda")
 # load("models/BMf.rda")
 # load("models/BMgcpe.rda")
 # MW_RT2w<- model_weights(BMfa, BMf, BMa, BMpa, BMp, BMgcpe,weights = "waic") 
@@ -509,6 +512,30 @@ apa_table(
   font_size = "tiny"
 )
 ```
+
+
+The model without any covariates appeared to be the best model (see *Table \@ref(tab:modelComp2RT)*), despite the model with AQ and PIQ seems to be almost equally good. The outcome of these two models are very similar and we kept the more parsimonious (note that there is no evidence of an effect of AQ and PIQ on our data when looking at the output of the model with covariates).
+
+## Posterior predictive check
+
+One way of evaluating the model is to evaluate its predictions. If the model is a good description of the (true) process that generated the observed data, then it should be able to generate data that looks like the observed data. The process of generating data from the estimated posterior distribution is called *posterior predictive checking* and can be used in many different ways using the `pp_check()` method [@gabry_visualization_2019]. In *Figure \ref{fig:ppcheckBMgcpe}*, we depict the  distribution of the raw data (dark cuurve) along with the distribution of one hundred simulated datasets drawn from the posterior predictive distribution (light thin curves).Our model seems quite good at generating data that fit with our observed data. 
+
+
+```{r ppcheckBMgcpe, echo = FALSE, out.width = "\\textwidth", fig.pos = "htb", fig.width = 5, fig.height = 2.7, fig.cap = "Posterior predictive checking for the BLMM."}
+load("Model/BMgcpe.rda")
+
+pp_check(BMgcpe, resp = "RT", nsamples = 1e2) +
+  theme_minimal(base_size = 11) +
+  theme(legend.position = "none") +
+  xlab("Response Time (in ms)") +
+  ylab("Density")
+
+```
+
+
+\newpage
+
+## Results
 
 
 ```{r summaryBMgcpe, echo = FALSE }
@@ -539,7 +566,7 @@ results_BMgcpe <-
 apa_table(
 results_BMgcpe <-results_BMgcpe%>%
   dplyr::select(Predictors,Estimate, SE, Lower,Upper, Rhat, BF01),
-placement = "htb",
+placement = "!h",
 align = c("c", "c"),
 caption = "Estimates and BF01 from the BLMM on RT.",
  note = "For each predictor, the first two columns represent the estimated
@@ -549,10 +576,13 @@ escape = TRUE
 )
 ```
 
-The model without any covariates appeared to be the best model (see *Table \@ref(tab:modelComp2RT)*), despite the model with AQ and PIQ seems to be almost equally good. The outcome of these two models are very similar and we kept the more parsimonious (note that there is no evidence of an effect of AQ and PIQ on our data when looking at the output of the model with covariates).
-We checked the quality of this model with posterior predictive checking, which seemed to be good (*Figure 3* of the main paper). The results of this BLMM are summarized in *Table \@ref(tab:summaryBMgcpe)* and are described in the paper.
+
+The results of this BLMM are summarized in *Table \@ref(tab:summaryBMgcpe)* and are described in the paper.
+
+
 
 \newpage
+
 
 # Analysis without outliers
 
@@ -632,7 +662,8 @@ apa_table(
 ```
 
 ## Posterior predictive check
-```{r ppcheckBMwo, echo =FALSE, out.width = "\\textwidth", fig.pos = "htb", fig.width = 4, fig.height = 2.5, fig.cap = "Posterior predictive checking for the BLMM without outliers."}
+
+```{r ppcheckBMwo, echo = FALSE, out.width = "\\textwidth", fig.pos = "!h", fig.width = 5, fig.height = 2.7, fig.cap = "Posterior predictive checking for the BLMM without outliers."}
 load("models/BMwo.rda")
 pp_check(BMwo, resp = "RT", nsamples = 1e2) +
   theme_minimal(base_size = 11) +
@@ -701,7 +732,7 @@ results_BMwo <-
 apa_table(
 results_BMwo <-results_BMwo %>%
   dplyr::select(Predictors,Estimate, SE, Lower,Upper, Rhat, BF01),
-placement = "htb",
+placement = "!h",
 align = c("c", "c"),
 caption = "Estimates from the ExGaussian BLMM on RT without outliers.",
 small = TRUE,
@@ -1089,7 +1120,7 @@ The model `IBMf`, with FSIQ as a covariate, appear to be the best model (see *Ta
  
 ## Posterior predictive check
  
-```{r ppcheckIBMf, echo = FALSE,  out.width = "\\textwidth", fig.pos = "!h", fig.width = 4, fig.height = 3, fig.cap = "Posterior predictive checking for BLMM concerning the IES."}
+```{r ppcheckIBMf, echo = FALSE,  out.width = "\\textwidth", fig.pos = "!h", fig.width = 5, fig.height = 2.7, fig.cap = "Posterior predictive checking for BLMM concerning the IES."}
 load("models/IBMf.rda")
 pp_check(IBMf, resp = "IES", nsamples = 1e2) +
   theme_minimal(base_size = 11) +
@@ -1159,7 +1190,6 @@ df <- read.csv("data/df.csv")[-1] %>%
   filter(Group =="TD" | Group == "ASD" & (AQ > 31 | ADOS_score_total > 6 | ADI == 1) ) %>%
   # removing participant who is less than 50 % correct
   filter(ID != "114")
-
 df %>%
   ggplot(aes(x = RT, color = Group, fill = Group) ) +
   geom_density(position = "identity", alpha = 0.5) +
@@ -1173,7 +1203,7 @@ df %>%
 
 Figure \ref{fig:data} shows that the distributions of response times (RTs) are roughly similar across conditions, with slightly slower and more spread RTs in the ASD group as compared to the TD group. In Figure \ref{fig:correctness1}, we plot the distribution of RTs for correct versus incorrect responses according to the characteristics of the participants (Sex and Group). In Figure \ref{fig:correctness2}, we make a similar plot, now faceting by condition (i.e., congruency and prime type).
 
-```{r correctness1, echo = FALSE, fig.cap = "Distribution of RTs for correct and incorrect responses according to Sex and Group. Incorrect responses are in pink and correct responses in blue."}
+```{r correctness1, echo = FALSE, fig.pos = "!h", fig.cap = "Distribution of RTs for correct and incorrect responses according to Sex and Group. Incorrect responses are in pink and correct responses in blue."}
 df %>%
   ggplot(aes(x = RT, color = as.factor(ACC), fill = as.factor(ACC) ) ) +
   geom_density(position = "identity", alpha = 0.5) +
@@ -1253,7 +1283,6 @@ where $i$ denotes observations (i.e., lines in the dataframe).
 We fitted all models using the `brms` package [@R-brms_a].
 
 ```{r model1-formula, eval = TRUE, results = "hide", cache = FALSE}
-
 # defining the model formula (one "linear model" per parameter)
 formula <- brmsformula(
   # drift rate (delta)
@@ -1390,18 +1419,15 @@ varying_effects_prime <- readRDS("models/wiener_varying_effects_prime.rds")
 #saveRDS(LOOCV, file = "models/model_comparison.rds")
 # saveRDS(weights, file = "models/weights.rds")
 # loads the model comparison table
-
-
 model_comparison_table <- readRDS(file = "models/model_comparison.rds")
 weights <- readRDS(file = "models/weights.rds")
 # MW_ddm <- as.data.frame(weights) %>% rownames_to_column(var="model")
-
 # prints the table
 apa_table(
   model_comparison_table %>%
     data.frame %>%
     rownames_to_column(var = "model") %>%
-    mutate(weight = rev(as.numeric(weights) ) ),
+    mutate(Model_Weights = rev(as.numeric(weights) ) ),
   placement = "htb",
   align = rep("c", 10),
   digits = c(0, 3, 3, 3, 3, 3, 3, 3, 3, 3),
@@ -1536,7 +1562,7 @@ plotPost(
   )
 ```
 
-Therefore, we have to apply the inverse link function (i.e., $\exp(\cdot)$) to the parameter to be able to interpret it. Taking $\exp(\beta_{1})$ gives the proportional change in the value of the boundary-separation parameter when we go from the TD group to the ASD group (see upper right panel of Figure \ref{fig:posterior-bs}). In our case, $\exp(\beta_{1}) \approx$ `r round(exp(fixef(varying_effects_prime)[12, 1]), 3)`, which means that going from TD to ASD leads to an increase of approximately 7% in the value of the boundary-separation parameter. In other words, response caution seems higher in the ASD group (see lower right panel of Figure \ref{fig:posterior-bs}) than in the TD group (see lower left panel of Figure \ref{fig:posterior-bs}).
+Therefore, we have to apply the inverse link function (i.e., $\exp(\cdot)$) to the parameter to be able to interpret it. Taking $\exp(\beta_{1})$ gives the proportional change in the value of the boundary-separation parameter when we go from the TD group to the ASD group (see upper right panel of Figure \ref{fig:posterior-bs}). In our case, $\exp(\beta_{1}) \approx$ `r round(exp(fixef(varying_effects_prime)[12, 1]), 3)`, which means that going from TD to ASD leads to an increase of approximately 8 % in the value of the boundary-separation parameter. In other words, response caution seems higher in the ASD group (see lower right panel of Figure \ref{fig:posterior-bs}) than in the TD group (see lower left panel of Figure \ref{fig:posterior-bs}).
 
 <!--
 round(fixef(varying_effects_prime)[1, 3], 3)
@@ -1635,13 +1661,14 @@ plotPost(
   )
 ```
 
-Therefore, we have to apply the inverse link function (i.e., $\exp(\cdot)$) to the parameter to be able to interpret it. Taking $\exp(\beta_{1})$ gives the proportional change in the value of the non-decision time parameter when we go from the TD group to the ASD group. In our case, $\exp(\beta_{1}) \approx 1.24$ which means that going from TD to ASD leads to an increase of approximately 24% of the non-decision time parameter value. In other words, non-decisional processes seem to take longer in the ASD group than in the TD group.
+Therefore, we have to apply the inverse link function (i.e., $\exp(\cdot)$) to the parameter to be able to interpret it. Taking $\exp(\beta_{1})$ gives the proportional change in the value of the non-decision time parameter when we go from the TD group to the ASD group. In our case, $\exp(\beta_{1}) \approx 1.24$ which means that going from TD to ASD leads to an increase of approximately 24 % of the non-decision time parameter value. In other words, non-decisional processes seem to take longer in the ASD group than in the TD group.
 
 \newpage
 
 ## Evaluating the model
 
-One way of evaluating the model is to evaluate its predictions. If the model is a good description of the (true) process that generated the observed data, then it should be able to generate data that looks like the observed data. The process of generating data from the estimated posterior distribution is called *posterior predictive checking* and can be used in many different ways using the `pp_check()` method [@gabry_visualization_2019]. In Figure \ref{fig:ppc}, we depict the  distribution of the raw data along with the distribution of ten simulated datasets.
+
+In Figure \ref{fig:ppc}, we depict the  distribution of the raw data along with the distribution of ten simulated datasets.
 
 ```{r ppc, echo = TRUE, eval = TRUE, out.width = "75%", fig.cap = "Posterior predictive checking. The dark blue line represents the distribution of raw data whereas light blue lines represent data simulated from the posterior distribution."}
 pp_check(varying_effects_prime, nsamples = 10) +
@@ -1690,7 +1717,6 @@ changeSciNot <- function(n) {
   output
   
 }
-
 # prints a summary of the model (all non-intercept parameters)
 results_varying_effects_prime <-
   summary(varying_effects_prime, prob = 0.95)$fixed %>%

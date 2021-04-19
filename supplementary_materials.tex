@@ -8,13 +8,12 @@
   ,doc,floatsintext]{apa6}
 \usepackage{lmodern}
 \usepackage{setspace}
-\usepackage{amsmath}
+\usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
-  \usepackage{amssymb}
 \else % if luatex or xetex
   \usepackage{unicode-math}
   \defaultfontfeatures{Scale=MatchLowercase}
@@ -40,8 +39,8 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={Supplementary materials to `Effect of spatially filtered primes on emotion categorization with an interference context in autism and typically developing'},
-  pdfauthor={Adeline Lacroix1, Ladislas Nalborczyk2, Frédéric Dutheil3, Klara Kovarski4,5, Sylvie Chokron4,5, Marta Garrido6, Marie Gomot7, \& Martial Mermillod1},
+  pdftitle={Supplementary materials to `High spatial frequency information in primes hastens happy faces categorization in autistic adults.'},
+  pdfauthor={Adeline Lacroix1, Ladislas Nalborczyk2,3, Frédéric Dutheil4, Klara Kovarski5,6, Sylvie Chokron5,6, Marta Garrido7,8, Marie Gomot9, \& Martial Mermillod1},
   pdflang={en-EN},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
@@ -84,7 +83,7 @@
 \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
 \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
-\usepackage{graphicx}
+\usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
@@ -175,32 +174,9 @@
 \else
   \usepackage[shorthands=off,main=english]{babel}
 \fi
-\ifluatex
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
-  % set entry spacing
-  \ifnum #2 > 0
-  \setlength{\parskip}{#2\baselineskip}
-  \fi
- }%
- {}
-\usepackage{calc}
-\newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
-\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
-\title{Supplementary materials to `Effect of spatially filtered primes on emotion categorization with an interference context in autism and typically developing'}
-\author{Adeline Lacroix\textsuperscript{1}, Ladislas Nalborczyk\textsuperscript{2}, Frédéric Dutheil\textsuperscript{3}, Klara Kovarski\textsuperscript{4,5}, Sylvie Chokron\textsuperscript{4,5}, Marta Garrido\textsuperscript{6}, Marie Gomot\textsuperscript{7}, \& Martial Mermillod\textsuperscript{1}}
+\title{Supplementary materials to `High spatial frequency information in primes hastens happy faces categorization in autistic adults.'}
+\author{Adeline Lacroix\textsuperscript{1}, Ladislas Nalborczyk\textsuperscript{2,3}, Frédéric Dutheil\textsuperscript{4}, Klara Kovarski\textsuperscript{5,6}, Sylvie Chokron\textsuperscript{5,6}, Marta Garrido\textsuperscript{7,8}, Marie Gomot\textsuperscript{9}, \& Martial Mermillod\textsuperscript{1}}
 \date{}
 
 
@@ -210,7 +186,7 @@ Correspondence concerning this article should be addressed to Adeline Lacroix, L
 
 }
 
-\affiliation{\vspace{0.5cm}\textsuperscript{1} LPNC, Univ. Grenoble Alpes, Univ. Savoie Mont Blanc, CNRS, 38000, Grenoble, France\\\textsuperscript{2} GIPSA-lab, CNRS, Univ. Grenoble Alpes, 38000, Grenoble, France.\\\textsuperscript{3} Université Clermont Auvergne, CNRS, LaPSCo, CHU Clermont-Ferrand, WittyFit, F-63000 Clermont-Ferrand, France\\\textsuperscript{4} Hôpital Fondation Ophtalmologique A. de Rothschild, Paris, France.\\\textsuperscript{5} Université de Paris, INCC UMR 8002, CNRS, F-75006 Paris, France\\\textsuperscript{6} Cognitive Neuroscience and Computational Psychiatry Lab, Melbourne School of Psychological Sciences, The University of Melbourne, Australia\\\textsuperscript{7} UMR 1253 iBrain, Université de Tours, Inserm, Tours, France}
+\affiliation{\vspace{0.5cm}\textsuperscript{1} LPNC, Univ. Grenoble Alpes, Univ. Savoie Mont Blanc, CNRS, 38000, Grenoble, France\\\textsuperscript{2} Aix Marseille Univ, CNRS, LPC, Marseille, France.\\\textsuperscript{3} Aix Marseille Univ, CNRS, LNC, Marseille, France.\\\textsuperscript{4} Université Clermont Auvergne, CNRS, LaPSCo, CHU Clermont-Ferrand, WittyFit, F-63000 Clermont-Ferrand, France\\\textsuperscript{5} Hôpital Fondation Ophtalmologique A. de Rothschild, Paris, France.\\\textsuperscript{6} Université de Paris, INCC UMR 8002, CNRS, F-75006 Paris, France.\\\textsuperscript{7} Cognitive Neuroscience and Computational Psychiatry Lab, Melbourne School of Psychological Sciences, The University of Melbourne, Australia.\\\textsuperscript{8} Australian Research Council Centre of Excellence for Integrative Brain Function, Australia.\\\textsuperscript{9} UMR 1253 iBrain, Université de Tours, Inserm, Tours, France.}
 
 \begin{document}
 \maketitle
@@ -222,12 +198,10 @@ Correspondence concerning this article should be addressed to Adeline Lacroix, L
 \setstretch{1.25}
 \newpage
 
+Parts 1, 2 and 3 of this document correspond to planned analyses (e.g., table of results, complementary analyses without outliers). Parts 4, 5 and 6 correspond to exploratory analyses with Drift Diffusion Models. All the procedure used for these analyses is detailed and can be used as a tutorial.
+
 \hypertarget{model-comparison-for-the-response-time-analysis}{%
 \section{Model comparison for the response time analysis}\label{model-comparison-for-the-response-time-analysis}}
-
-The first analysis was conducted on our data without:\\
-- participants with accuracy \textless{} 50 \% (1 autistic participant)\\
-- trials with RT \textless{} 300 ms (1,50 \%)
 
 \hypertarget{inclusion-of-different-predictors}{%
 \subsection{Inclusion of different predictors}\label{inclusion-of-different-predictors}}
@@ -310,14 +284,14 @@ We compared the following models:
 
 \begin{tabular}{cccccccccc}
 \toprule
-model & \multicolumn{1}{c}{elpd\_diff} & \multicolumn{1}{c}{se\_diff} & \multicolumn{1}{c}{elpd\_waic} & \multicolumn{1}{c}{se\_elpd\_waic} & \multicolumn{1}{c}{p\_waic} & \multicolumn{1}{c}{se\_p\_waic} & \multicolumn{1}{c}{waic} & \multicolumn{1}{c}{se\_waic} & \multicolumn{1}{c}{Model\_Weights}\\
+model & \multicolumn{1}{c}{elpd\_diff} & \multicolumn{1}{c}{se\_diff} & \multicolumn{1}{c}{elpd\_loo} & \multicolumn{1}{c}{se\_elpd\_loo} & \multicolumn{1}{c}{p\_loo} & \multicolumn{1}{c}{se\_p\_loo} & \multicolumn{1}{c}{looic} & \multicolumn{1}{c}{se\_looic} & \multicolumn{1}{c}{Model\_Weights}\\
 \midrule
-BMgcpe & 0.000 & 0.000 & -92,726.667 & 122.773 & 281.232 & 8.621 & 185,453.334 & 245.545 & 0.292\\
-BMpa & -0.011 & 0.268 & -92,726.678 & 122.772 & 281.177 & 8.577 & 185,453.356 & 245.543 & 0.278\\
-BMf & -0.607 & 0.348 & -92,727.274 & 122.797 & 281.521 & 8.645 & 185,454.548 & 245.594 & 0.161\\
-BMa & -0.836 & 0.251 & -92,727.503 & 122.775 & 281.669 & 8.625 & 185,455.006 & 245.549 & 0.126\\
-BMfa & -1.238 & 0.305 & -92,727.905 & 122.795 & 281.247 & 8.604 & 185,455.810 & 245.590 & 0.078\\
-BMp & -1.430 & 0.284 & -92,728.097 & 122.804 & 282.796 & 8.688 & 185,456.194 & 245.608 & 0.064\\
+BMgcpe & 0.000 & 0.000 & -92,727.743 & 122.793 & 282.308 & 8.677 & 185,455.485 & 245.587 & 0.292\\
+BMpa & -0.048 & 0.276 & -92,727.790 & 122.794 & 282.289 & 8.639 & 185,455.581 & 245.588 & 0.278\\
+BMf & -0.593 & 0.349 & -92,728.336 & 122.817 & 282.583 & 8.698 & 185,456.672 & 245.633 & 0.161\\
+BMa & -0.838 & 0.266 & -92,728.581 & 122.796 & 282.747 & 8.681 & 185,457.161 & 245.591 & 0.126\\
+BMfa & -1.321 & 0.315 & -92,729.064 & 122.822 & 282.406 & 8.677 & 185,458.128 & 245.643 & 0.078\\
+BMp & -1.521 & 0.313 & -92,729.264 & 122.829 & 283.963 & 8.754 & 185,458.528 & 245.657 & 0.064\\
 \bottomrule
 \end{tabular}
 
@@ -328,7 +302,28 @@ BMp & -1.430 & 0.284 & -92,728.097 & 122.804 & 282.796 & 8.688 & 185,456.194 & 2
 
 \end{table}
 
-\begin{table}[htb]
+The model without any covariates appeared to be the best model (see \emph{Table \ref{tab:modelComp2RT}}), despite the model with AQ and PIQ seems to be almost equally good. The outcome of these two models are very similar and we kept the more parsimonious (note that there is no evidence of an effect of AQ and PIQ on our data when looking at the output of the model with covariates).
+
+\hypertarget{posterior-predictive-check}{%
+\subsection{Posterior predictive check}\label{posterior-predictive-check}}
+
+One way of evaluating the model is to evaluate its predictions. If the model is a good description of the (true) process that generated the observed data, then it should be able to generate data that looks like the observed data. The process of generating data from the estimated posterior distribution is called \emph{posterior predictive checking} and can be used in many different ways using the \texttt{pp\_check()} method (Gabry, Simpson, Vehtari, Betancourt, \& Gelman, \protect\hyperlink{ref-gabry_visualization_2019}{2019}). In \emph{Figure \ref{fig:ppcheckBMgcpe}}, we depict the distribution of the raw data (dark cuurve) along with the distribution of one hundred simulated datasets drawn from the posterior predictive distribution (light thin curves).Our model seems quite good at generating data that fit with our observed data.
+
+\begin{figure}[htb]
+
+{\centering \includegraphics[width=\textwidth]{supplementary_materials_files/figure-latex/ppcheckBMgcpe-1} 
+
+}
+
+\caption{Posterior predictive checking for the BLMM.}\label{fig:ppcheckBMgcpe}
+\end{figure}
+
+\newpage
+
+\hypertarget{results}{%
+\subsection{Results}\label{results}}
+
+\begin{table}[!h]
 
 \begin{center}
 \begin{threeparttable}
@@ -373,8 +368,7 @@ Group x Prime x Congruency x Emotion & 7.98 & 17.00 & -25.18 & 41.78 & 1.00 & 2.
 
 \end{table}
 
-The model without any covariates appeared to be the best model (see \emph{Table \ref{tab:modelComp2RT}}), despite the model with AQ and PIQ seems to be almost equally good. The outcome of these two models are very similar and we kept the more parsimonious (note that there is no evidence of an effect of AQ and PIQ on our data when looking at the output of the model with covariates).
-We checked the quality of this model with posterior predictive checking, which seemed to be good (\emph{Figure 3} of the main paper). The results of this BLMM are summarized in \emph{Table \ref{tab:summaryBMgcpe}} and are described in the paper.
+The results of this BLMM are summarized in \emph{Table \ref{tab:summaryBMgcpe}} and are described in the paper.
 
 \newpage
 
@@ -420,10 +414,10 @@ Stroop Effect & 0.45 (0.81) & 0.55 (0.77) & 3.306\\
 
 \end{table}
 
-\hypertarget{posterior-predictive-check}{%
-\subsection{Posterior predictive check}\label{posterior-predictive-check}}
+\hypertarget{posterior-predictive-check-1}{%
+\subsection{Posterior predictive check}\label{posterior-predictive-check-1}}
 
-\begin{figure}[htb]
+\begin{figure}[!h]
 
 {\centering \includegraphics[width=\textwidth]{supplementary_materials_files/figure-latex/ppcheckBMwo-1} 
 
@@ -434,10 +428,10 @@ Stroop Effect & 0.45 (0.81) & 0.55 (0.77) & 3.306\\
 
 \newpage
 
-\hypertarget{results}{%
-\subsection{Results}\label{results}}
+\hypertarget{results-1}{%
+\subsection{Results}\label{results-1}}
 
-\begin{table}[htb]
+\begin{table}[!h]
 
 \begin{center}
 \begin{threeparttable}
@@ -576,8 +570,8 @@ IBMgcpe & -2.056 & 1.509 & -2,798.330 & 28.402 & 87.995 & 13.260 & 5,596.661 & 5
 
 The model \texttt{IBMf}, with FSIQ as a covariate, appear to be the best model (see \emph{Table \ref{tab:modelCompIES2}}). We checked the validity of this model with posterior predictive check (cf.~\emph{Figure 2}), which appeared to be good.
 
-\hypertarget{posterior-predictive-check-1}{%
-\subsection{Posterior predictive check}\label{posterior-predictive-check-1}}
+\hypertarget{posterior-predictive-check-2}{%
+\subsection{Posterior predictive check}\label{posterior-predictive-check-2}}
 
 \begin{figure}[!h]
 
@@ -590,8 +584,8 @@ The model \texttt{IBMf}, with FSIQ as a covariate, appear to be the best model (
 
 \newpage
 
-\hypertarget{results-1}{%
-\subsection{Results}\label{results-1}}
+\hypertarget{results-2}{%
+\subsection{Results}\label{results-2}}
 
 \begin{table}[htb]
 
@@ -649,7 +643,7 @@ Group x Prime x Congruency x Emotion & 3.08 & 31.31 & -57.82 & 64.40 & 1.00 & 1.
 
 Figure \ref{fig:data} shows that the distributions of response times (RTs) are roughly similar across conditions, with slightly slower and more spread RTs in the ASD group as compared to the TD group. In Figure \ref{fig:correctness1}, we plot the distribution of RTs for correct versus incorrect responses according to the characteristics of the participants (Sex and Group). In Figure \ref{fig:correctness2}, we make a similar plot, now faceting by condition (i.e., congruency and prime type).
 
-\begin{figure}[!htb]
+\begin{figure}[!h]
 
 {\centering \includegraphics[width=0.75\linewidth]{supplementary_materials_files/figure-latex/correctness1-1} 
 
@@ -672,12 +666,12 @@ Figure \ref{fig:data} shows that the distributions of response times (RTs) are r
 \hypertarget{diffusion-decision-modelling}{%
 \section{Diffusion decision modelling}\label{diffusion-decision-modelling}}
 
-Diffusion decision models (DDM) allow detailed explanations of behaviour in two-alternative forced choice tasks. We know that the data collected in such tasks obey some law-like patterns. For instance, RT distributions are generally positively skewed, with the skewness increasing with task difficulty. We also know that the mean of the RTs is proportional to the standard deviation of the RTs. Increases in the difficulty usually lead to increased RTs and decreased accuracy. Moreover, changes in difficulty also produces regular changes in the distribution of RTs, most notably in its spread but not much in its shape (for a review, see \protect\hyperlink{ref-forstmann_sequential_2016}{Forstmann, Ratcliff, \& Wagenmakers, 2016}). Therefore, several models have been proposed to account for the peculiarities of the data coming from such tasks as well as to relate it to the underlying cognitive processes.
+Diffusion decision models (DDM) allow detailed explanations of behaviour in two-alternative forced choice tasks. We know that the data collected in such tasks obey some law-like patterns. For instance, RT distributions are generally positively skewed, with the skewness increasing with task difficulty. We also know that the mean of the RTs is proportional to the standard deviation of the RTs. Increases in the difficulty usually lead to increased RTs and decreased accuracy. Moreover, changes in difficulty also produces regular changes in the distribution of RTs, most notably in its spread but not much in its shape (for a review, see Forstmann, Ratcliff, \& Wagenmakers, \protect\hyperlink{ref-forstmann_sequential_2016}{2016}). Therefore, several models have been proposed to account for the peculiarities of the data coming from such tasks as well as to relate it to the underlying cognitive processes.
 
 \hypertarget{what-is-a-diffusion-decision-model}{%
 \subsection{What is a diffusion decision model?}\label{what-is-a-diffusion-decision-model}}
 
-The vanilla (i.e., original) diffusion decision model (the ``Wiener model'') is a continuous-time evidence accumulation model for binary choice tasks (\protect\hyperlink{ref-ratcliff_theory_1978}{Ratcliff, 1978}). It assumes that in each trial evidence is accumulated in a noisy (diffusion) process by a single accumulator. As shown in Figure \ref{fig:wiener-figure}, evidence accumulation starts at some point (the starting point or ``bias'') and continues until the accumulator hits one of the two decision bounds in which case the corresponding response is given. The total response time is the sum of the decision time from the accumulation process plus non-decisional components (\protect\hyperlink{ref-vandekerckhove_crossed_2010}{Vandekerckhove, Verheyen, \& Tuerlinckx, 2010}; \protect\hyperlink{ref-wabersich_rwiener_2014}{Wabersich \& Vandekerckhove, 2014}; \protect\hyperlink{ref-wagenmakers_methodological_2009-1}{Wagenmakers, 2009}).\footnote{Where diffusion is to be understood as the continuous equivalent of a random-walk.} In other words, this kind of model provides a \emph{decomposition} of RT data that isolates components (of processing) from stimulus encoding to decision so that they can be studied individually (\protect\hyperlink{ref-ratcliff_diffusion_2008}{Ratcliff \& McKoon, 2008}; \protect\hyperlink{ref-wagenmakers_ez-diffusion_2007}{Wagenmakers, Van Der Maas, \& Grasman, 2007}).
+The vanilla (i.e., original) diffusion decision model (the \enquote{Wiener model}) is a continuous-time evidence accumulation model for binary choice tasks (Ratcliff, \protect\hyperlink{ref-ratcliff_theory_1978}{1978}). It assumes that in each trial evidence is accumulated in a noisy (diffusion) process by a single accumulator. As shown in Figure \ref{fig:wiener-figure}, evidence accumulation starts at some point (the starting point or \enquote{bias}) and continues until the accumulator hits one of the two decision bounds in which case the corresponding response is given. The total response time is the sum of the decision time from the accumulation process plus non-decisional components (Vandekerckhove, Verheyen, \& Tuerlinckx, \protect\hyperlink{ref-vandekerckhove_crossed_2010}{2010}; Wabersich \& Vandekerckhove, \protect\hyperlink{ref-wabersich_rwiener_2014}{2014}; Wagenmakers, \protect\hyperlink{ref-wagenmakers_methodological_2009-1}{2009}).\footnote{Where diffusion is to be understood as the continuous equivalent of a random-walk.} In other words, this kind of model provides a \emph{decomposition} of RT data that isolates components (of processing) from stimulus encoding to decision so that they can be studied individually (Ratcliff \& McKoon, \protect\hyperlink{ref-ratcliff_diffusion_2008}{2008}; Wagenmakers, Van Der Maas, \& Grasman, \protect\hyperlink{ref-wagenmakers_ez-diffusion_2007}{2007}).
 
 
 
@@ -687,14 +681,14 @@ The vanilla (i.e., original) diffusion decision model (the ``Wiener model'') is 
 
 }
 
-\caption{A graphical illustration of the Wiener diffusion model. Figure from \protect\hyperlink{ref-vinding_volition_2018}{Vinding, Lindeløv, Xiao, Chan, \& Sørensen} (\protect\hyperlink{ref-vinding_volition_2018}{2018}).}\label{fig:wiener-figure}
+\caption{A graphical illustration of the Wiener diffusion model. Figure from Vinding, Lindeløv, Xiao, Chan, and Sørensen (\protect\hyperlink{ref-vinding_volition_2018}{2018}).}\label{fig:wiener-figure}
 \end{figure}
 
-In sum, the original Wiener model allows decomposing responses to a binary choice tasks and corresponding response times into four latent processes (\protect\hyperlink{ref-singmann_diffusionux2fwiener_2017}{Singmann, 2017}):
+In sum, the original Wiener model allows decomposing responses to a binary choice tasks and corresponding response times into four latent processes (Singmann, \protect\hyperlink{ref-singmann_diffusionux2fwiener_2017}{2017}):
 
 \begin{itemize}
 \item
-  The \textbf{drift rate} \(\delta\) (delta) is the average slope of the accumulation process towards the boundaries (i.e., it represents the average amount of evidence accumulated per unit time). The larger the (absolute value of the) drift rate, the stronger the evidence for the corresponding response option (thus quantifying the ``ease of processing'').
+  The \textbf{drift rate} \(\delta\) (delta) is the average slope of the accumulation process towards the boundaries (i.e., it represents the average amount of evidence accumulated per unit time). The larger the (absolute value of the) drift rate, the stronger the evidence for the corresponding response option (thus quantifying the \enquote{ease of processing}).
 \item
   The \textbf{boundary separation} \(\alpha\) (alpha) is the distance between the two decision bounds and can be interpreted as a measure of response caution, with high \(\alpha\) meaning high caution.
 \item
@@ -703,37 +697,37 @@ In sum, the original Wiener model allows decomposing responses to a binary choic
   The \textbf{non-decision time} \(\tau\) (tau) captures all non-decisional processes such as stimulus encoding and (motor) response processes.
 \end{itemize}
 
-An important decision that has to be made before setting up a model is which parameters are allowed to differ between which conditions. One common constraint of the Wiener model is that the parameters that are set before the evidence accumulation process starts (i.e., boundary separation, starting point, and non-decision time) cannot change based on stimulus characteristics that are not known to the participant before the start of the trial. However, as the response time was recorded from the presentation of the \emph{target}, the participant already had knowledge about the prime when the evidence accumulations began. Thus, the characteristics of the item (i.e., in our case, congruency and spatial characteristics) are only allowed to affect the drift rate, but we compared this model to an augmented model including the nature of the prime (i.e., LSF vs.~HSF) and an interaction with Group on the response bias (starting point). Also note that all stimulus-related variables are manipulated within-subject. Thus, the maximal random-effects structure (\protect\hyperlink{ref-barr_random_2013-1}{Barr, Levy, Scheepers, \& Tily, 2013}) entails corresponding random-effects parameters for each fixed-effect. To set up the model we need to invoke the \texttt{brms::brmsformula()} function and construct one formula for each of the four parameters of the Wiener model.
+An important decision that has to be made before setting up a model is which parameters are allowed to differ between which conditions. One common constraint of the Wiener model is that the parameters that are set before the evidence accumulation process starts (i.e., boundary separation, starting point, and non-decision time) cannot change based on stimulus characteristics that are not known to the participant before the start of the trial. However, as the response time was recorded from the presentation of the \emph{target}, the participant already had knowledge about the prime when the evidence accumulations began. Thus, the characteristics of the item (i.e., in our case, congruency and spatial characteristics) are only allowed to affect the drift rate, but we compared this model to an augmented model including the nature of the prime (i.e., LSF vs.~HSF) and an interaction with Group on the response bias (starting point). Also note that all stimulus-related variables are manipulated within-subject. Thus, the maximal random-effects structure (Barr, Levy, Scheepers, \& Tily, \protect\hyperlink{ref-barr_random_2013-1}{2013}) entails corresponding random-effects parameters for each fixed-effect. To set up the model we need to invoke the \texttt{brms::brmsformula()} function and construct one formula for each of the four parameters of the Wiener model.
 
 \hypertarget{fitting-the-model}{%
 \subsection{Fitting the model}\label{fitting-the-model}}
 
-We fitted all models using the \texttt{brms} package (\protect\hyperlink{ref-R-brms_a}{Bürkner, 2017}).
+We fitted all models using the \texttt{brms} package (Bürkner, \protect\hyperlink{ref-R-brms_a}{2017}).
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# defining the model formula (one "linear model" per parameter)}
-\NormalTok{formula }\OtherTok{\textless{}{-}} \FunctionTok{brmsformula}\NormalTok{(}
-  \CommentTok{\# drift rate (delta)}
-\NormalTok{  RT }\SpecialCharTok{|} \FunctionTok{dec}\NormalTok{(ACC) }\SpecialCharTok{\textasciitilde{}} \DecValTok{1} \SpecialCharTok{+}\NormalTok{ GroupC }\SpecialCharTok{*}\NormalTok{ CongC }\SpecialCharTok{*}\NormalTok{ PrimeC }\SpecialCharTok{+}\NormalTok{ (}\DecValTok{1} \SpecialCharTok{|}\NormalTok{ ID) }\SpecialCharTok{+}\NormalTok{ (}\DecValTok{1} \SpecialCharTok{|}\NormalTok{ Target),}
-  \CommentTok{\# boundary separation parameter (alpha)}
-\NormalTok{  bs }\SpecialCharTok{\textasciitilde{}} \DecValTok{1} \SpecialCharTok{+}\NormalTok{ GroupC }\SpecialCharTok{+}\NormalTok{ (}\DecValTok{1} \SpecialCharTok{|}\NormalTok{ ID) }\SpecialCharTok{+}\NormalTok{ (}\DecValTok{1} \SpecialCharTok{|}\NormalTok{ Target),}
-  \CommentTok{\# non{-}decision time (tau)}
-\NormalTok{  ndt }\SpecialCharTok{\textasciitilde{}} \DecValTok{1} \SpecialCharTok{+}\NormalTok{ GroupC }\SpecialCharTok{+}\NormalTok{ (}\DecValTok{1} \SpecialCharTok{|}\NormalTok{ ID) }\SpecialCharTok{+}\NormalTok{ (}\DecValTok{1} \SpecialCharTok{|}\NormalTok{ Target),}
-  \CommentTok{\# starting point or bias (beta)}
-\NormalTok{  bias }\SpecialCharTok{\textasciitilde{}} \DecValTok{1} \SpecialCharTok{+}\NormalTok{ GroupC }\SpecialCharTok{*}\NormalTok{ PrimeC }\SpecialCharTok{+}\NormalTok{ (}\DecValTok{1} \SpecialCharTok{|}\NormalTok{ ID) }\SpecialCharTok{+}\NormalTok{ (}\DecValTok{1} \SpecialCharTok{|}\NormalTok{ Target)}
+\CommentTok{# defining the model formula (one "linear model" per parameter)}
+\NormalTok{formula <-}\StringTok{ }\KeywordTok{brmsformula}\NormalTok{(}
+  \CommentTok{# drift rate (delta)}
+\NormalTok{  RT }\OperatorTok{|}\StringTok{ }\KeywordTok{dec}\NormalTok{(ACC) }\OperatorTok{~}\StringTok{ }\DecValTok{1} \OperatorTok{+}\StringTok{ }\NormalTok{GroupC }\OperatorTok{*}\StringTok{ }\NormalTok{CongC }\OperatorTok{*}\StringTok{ }\NormalTok{PrimeC }\OperatorTok{+}\StringTok{ }\NormalTok{(}\DecValTok{1} \OperatorTok{|}\StringTok{ }\NormalTok{ID) }\OperatorTok{+}\StringTok{ }\NormalTok{(}\DecValTok{1} \OperatorTok{|}\StringTok{ }\NormalTok{Target),}
+  \CommentTok{# boundary separation parameter (alpha)}
+\NormalTok{  bs }\OperatorTok{~}\StringTok{ }\DecValTok{1} \OperatorTok{+}\StringTok{ }\NormalTok{GroupC }\OperatorTok{+}\StringTok{ }\NormalTok{(}\DecValTok{1} \OperatorTok{|}\StringTok{ }\NormalTok{ID) }\OperatorTok{+}\StringTok{ }\NormalTok{(}\DecValTok{1} \OperatorTok{|}\StringTok{ }\NormalTok{Target),}
+  \CommentTok{# non-decision time (tau)}
+\NormalTok{  ndt }\OperatorTok{~}\StringTok{ }\DecValTok{1} \OperatorTok{+}\StringTok{ }\NormalTok{GroupC }\OperatorTok{+}\StringTok{ }\NormalTok{(}\DecValTok{1} \OperatorTok{|}\StringTok{ }\NormalTok{ID) }\OperatorTok{+}\StringTok{ }\NormalTok{(}\DecValTok{1} \OperatorTok{|}\StringTok{ }\NormalTok{Target),}
+  \CommentTok{# starting point or bias (beta)}
+\NormalTok{  bias }\OperatorTok{~}\StringTok{ }\DecValTok{1} \OperatorTok{+}\StringTok{ }\NormalTok{GroupC }\OperatorTok{*}\StringTok{ }\NormalTok{PrimeC }\OperatorTok{+}\StringTok{ }\NormalTok{(}\DecValTok{1} \OperatorTok{|}\StringTok{ }\NormalTok{ID) }\OperatorTok{+}\StringTok{ }\NormalTok{(}\DecValTok{1} \OperatorTok{|}\StringTok{ }\NormalTok{Target)}
 \NormalTok{  )}
-\CommentTok{\# defining the priors}
-\NormalTok{priors }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}
-  \CommentTok{\# priors for the intercepts}
-  \FunctionTok{prior}\NormalTok{(}\StringTok{"normal(0, 5)"}\NormalTok{, }\AttributeTok{class =} \StringTok{"Intercept"}\NormalTok{),}
-  \FunctionTok{prior}\NormalTok{(}\StringTok{"normal(0, 1)"}\NormalTok{, }\AttributeTok{class =} \StringTok{"Intercept"}\NormalTok{, }\AttributeTok{dpar =} \StringTok{"bs"}\NormalTok{),}
-  \FunctionTok{prior}\NormalTok{(}\StringTok{"normal(0, 1)"}\NormalTok{, }\AttributeTok{class =} \StringTok{"Intercept"}\NormalTok{, }\AttributeTok{dpar =} \StringTok{"ndt"}\NormalTok{),}
-  \FunctionTok{prior}\NormalTok{(}\StringTok{"normal(0, 1)"}\NormalTok{, }\AttributeTok{class =} \StringTok{"Intercept"}\NormalTok{, }\AttributeTok{dpar =} \StringTok{"bias"}\NormalTok{),}
-  \CommentTok{\# priors for the slopes}
-  \FunctionTok{prior}\NormalTok{(}\StringTok{"normal(0, 1)"}\NormalTok{, }\AttributeTok{class =} \StringTok{"b"}\NormalTok{),}
-  \CommentTok{\# priors on the SD of the varying effects}
-  \FunctionTok{prior}\NormalTok{(}\StringTok{"exponential(1)"}\NormalTok{, }\AttributeTok{class =} \StringTok{"sd"}\NormalTok{)}
+\CommentTok{# defining the priors}
+\NormalTok{priors <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}
+  \CommentTok{# priors for the intercepts}
+  \KeywordTok{prior}\NormalTok{(}\StringTok{"normal(0, 5)"}\NormalTok{, }\DataTypeTok{class =} \StringTok{"Intercept"}\NormalTok{),}
+  \KeywordTok{prior}\NormalTok{(}\StringTok{"normal(0, 1)"}\NormalTok{, }\DataTypeTok{class =} \StringTok{"Intercept"}\NormalTok{, }\DataTypeTok{dpar =} \StringTok{"bs"}\NormalTok{),}
+  \KeywordTok{prior}\NormalTok{(}\StringTok{"normal(0, 1)"}\NormalTok{, }\DataTypeTok{class =} \StringTok{"Intercept"}\NormalTok{, }\DataTypeTok{dpar =} \StringTok{"ndt"}\NormalTok{),}
+  \KeywordTok{prior}\NormalTok{(}\StringTok{"normal(0, 1)"}\NormalTok{, }\DataTypeTok{class =} \StringTok{"Intercept"}\NormalTok{, }\DataTypeTok{dpar =} \StringTok{"bias"}\NormalTok{),}
+  \CommentTok{# priors for the slopes}
+  \KeywordTok{prior}\NormalTok{(}\StringTok{"normal(0, 1)"}\NormalTok{, }\DataTypeTok{class =} \StringTok{"b"}\NormalTok{),}
+  \CommentTok{# priors on the SD of the varying effects}
+  \KeywordTok{prior}\NormalTok{(}\StringTok{"exponential(1)"}\NormalTok{, }\DataTypeTok{class =} \StringTok{"sd"}\NormalTok{)}
 \NormalTok{  )}
 \end{Highlighting}
 \end{Shaded}
@@ -742,33 +736,33 @@ We then fit this model below using the \texttt{brms::brm()} function. We run eig
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# specify initial values to help the model start sampling}
-\CommentTok{\# (with small variation between chains)}
-\NormalTok{chains }\OtherTok{\textless{}{-}} \DecValTok{8} \CommentTok{\# number of chains}
-\NormalTok{epsilon }\OtherTok{\textless{}{-}} \FloatTok{0.1} \CommentTok{\# variability in starting value for the NDT intercept}
-\NormalTok{get\_init\_value }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(x) }\FunctionTok{list}\NormalTok{(}\AttributeTok{Intercept\_ndt =} \FunctionTok{rnorm}\NormalTok{(}\AttributeTok{n =} \DecValTok{1}\NormalTok{, }\AttributeTok{mean =}\NormalTok{ x, }\AttributeTok{sd =}\NormalTok{ epsilon) )}
-\NormalTok{inits\_drift }\OtherTok{\textless{}{-}} \FunctionTok{replicate}\NormalTok{(chains, }\FunctionTok{get\_init\_value}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{3}\NormalTok{), }\AttributeTok{simplify =} \ConstantTok{FALSE}\NormalTok{)}
-\CommentTok{\# fitting the model}
-\NormalTok{varying\_effects\_prime }\OtherTok{\textless{}{-}} \FunctionTok{brm}\NormalTok{(}
+\CommentTok{# specify initial values to help the model start sampling}
+\CommentTok{# (with small variation between chains)}
+\NormalTok{chains <-}\StringTok{ }\DecValTok{8} \CommentTok{# number of chains}
+\NormalTok{epsilon <-}\StringTok{ }\FloatTok{0.1} \CommentTok{# variability in starting value for the NDT intercept}
+\NormalTok{get_init_value <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x) }\KeywordTok{list}\NormalTok{(}\DataTypeTok{Intercept_ndt =} \KeywordTok{rnorm}\NormalTok{(}\DataTypeTok{n =} \DecValTok{1}\NormalTok{, }\DataTypeTok{mean =}\NormalTok{ x, }\DataTypeTok{sd =}\NormalTok{ epsilon) )}
+\NormalTok{inits_drift <-}\StringTok{ }\KeywordTok{replicate}\NormalTok{(chains, }\KeywordTok{get_init_value}\NormalTok{(}\OperatorTok{-}\DecValTok{3}\NormalTok{), }\DataTypeTok{simplify =} \OtherTok{FALSE}\NormalTok{)}
+\CommentTok{# fitting the model}
+\NormalTok{varying_effects_prime <-}\StringTok{ }\KeywordTok{brm}\NormalTok{(}
 \NormalTok{  formula, }
-  \AttributeTok{data =}\NormalTok{ df,}
-  \CommentTok{\# specifying the family and link functions for each parameter}
-  \AttributeTok{family =} \FunctionTok{wiener}\NormalTok{(}
-    \AttributeTok{link =} \StringTok{"identity"}\NormalTok{, }\AttributeTok{link\_bs =} \StringTok{"log"}\NormalTok{,}
-    \AttributeTok{link\_ndt =} \StringTok{"log"}\NormalTok{, }\AttributeTok{link\_bias =} \StringTok{"logit"}
+  \DataTypeTok{data =}\NormalTok{ df,}
+  \CommentTok{# specifying the family and link functions for each parameter}
+  \DataTypeTok{family =} \KeywordTok{wiener}\NormalTok{(}
+    \DataTypeTok{link =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{link_bs =} \StringTok{"log"}\NormalTok{,}
+    \DataTypeTok{link_ndt =} \StringTok{"log"}\NormalTok{, }\DataTypeTok{link_bias =} \StringTok{"logit"}
 \NormalTok{    ),}
-  \CommentTok{\# comment this line to use default priors}
-  \AttributeTok{prior =}\NormalTok{ priors,}
-  \CommentTok{\# list of initialisation values}
-  \AttributeTok{inits =}\NormalTok{ inits\_drift,}
-  \AttributeTok{init\_r =} \FloatTok{0.05}\NormalTok{,}
-  \AttributeTok{warmup =} \DecValTok{2000}\NormalTok{, }\AttributeTok{iter =} \DecValTok{5000}\NormalTok{,}
-  \AttributeTok{chains =}\NormalTok{ chains, }\AttributeTok{cores =}\NormalTok{ chains,}
-  \AttributeTok{control =} \FunctionTok{list}\NormalTok{(}\AttributeTok{adapt\_delta =} \FloatTok{0.99}\NormalTok{, }\AttributeTok{max\_treedepth =} \DecValTok{15}\NormalTok{),}
-  \CommentTok{\# saves the model (as .rds) or loads it if it already exists}
-  \AttributeTok{file =} \StringTok{"models/wiener\_varying\_effects\_prime.rds"}\NormalTok{,}
-  \CommentTok{\# needed for hypothesis testing}
-  \AttributeTok{sample\_prior =} \ConstantTok{TRUE}
+  \CommentTok{# comment this line to use default priors}
+  \DataTypeTok{prior =}\NormalTok{ priors,}
+  \CommentTok{# list of initialisation values}
+  \DataTypeTok{inits =}\NormalTok{ inits_drift,}
+  \DataTypeTok{init_r =} \FloatTok{0.05}\NormalTok{,}
+  \DataTypeTok{warmup =} \DecValTok{2000}\NormalTok{, }\DataTypeTok{iter =} \DecValTok{5000}\NormalTok{,}
+  \DataTypeTok{chains =}\NormalTok{ chains, }\DataTypeTok{cores =}\NormalTok{ chains,}
+  \DataTypeTok{control =} \KeywordTok{list}\NormalTok{(}\DataTypeTok{adapt_delta =} \FloatTok{0.99}\NormalTok{, }\DataTypeTok{max_treedepth =} \DecValTok{15}\NormalTok{),}
+  \CommentTok{# saves the model (as .rds) or loads it if it already exists}
+  \DataTypeTok{file =} \StringTok{"models/wiener_varying_effects_prime.rds"}\NormalTok{,}
+  \CommentTok{# needed for hypothesis testing}
+  \DataTypeTok{sample_prior =} \OtherTok{TRUE}
 \NormalTok{  )}
 \end{Highlighting}
 \end{Shaded}
@@ -792,7 +786,7 @@ We first compared the previous model with a similar model including an effect of
 
 \begin{tabular}{cccccccccc}
 \toprule
-model & \multicolumn{1}{c}{elpd\_diff} & \multicolumn{1}{c}{se\_diff} & \multicolumn{1}{c}{elpd\_waic} & \multicolumn{1}{c}{se\_elpd\_waic} & \multicolumn{1}{c}{p\_waic} & \multicolumn{1}{c}{se\_p\_waic} & \multicolumn{1}{c}{waic} & \multicolumn{1}{c}{se\_waic} & \multicolumn{1}{c}{weight}\\
+model & \multicolumn{1}{c}{elpd\_diff} & \multicolumn{1}{c}{se\_diff} & \multicolumn{1}{c}{elpd\_waic} & \multicolumn{1}{c}{se\_elpd\_waic} & \multicolumn{1}{c}{p\_waic} & \multicolumn{1}{c}{se\_p\_waic} & \multicolumn{1}{c}{waic} & \multicolumn{1}{c}{se\_waic} & \multicolumn{1}{c}{Model\_Weights}\\
 \midrule
 varying\_effects\_prime & 0.000 & 0.000 & 4,123.821 & 139.639 & 287.720 & 11.840 & -8,247.641 & 279.279 & 0.878\\
 varying\_effects & -16.991 & 6.742 & 4,106.830 & 139.704 & 284.992 & 11.778 & -8,213.659 & 279.409 & 0.122\\
@@ -806,7 +800,7 @@ varying\_effects & -16.991 & 6.742 & 4,106.830 & 139.704 & 284.992 & 11.778 & -8
 
 \end{table}
 
-From this table (especially from the last two columns) we see that the varying-effects model including an effect of Prime on the response bias has the lowest WAIC, which can be interpreted by saying that this model is estimated to be the closest to the ``true model'' in an information-theoretic sense, or equivalently, that it is expected to have the lowest out-of-sample deviance. In the following, we therefore report estimates from this model.
+From this table (especially from the last two columns) we see that the varying-effects model including an effect of Prime on the response bias has the lowest WAIC, which can be interpreted by saying that this model is estimated to be the closest to the \enquote{true model} in an information-theoretic sense, or equivalently, that it is expected to have the lowest out-of-sample deviance. In the following, we therefore report estimates from this model.
 
 \hypertarget{interpreting-the-output}{%
 \subsection{Interpreting the output}\label{interpreting-the-output}}
@@ -815,8 +809,8 @@ Now that we have fitted the model, we are left with the task of interpreting the
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# prints a summary of the model}
-\FunctionTok{summary}\NormalTok{(varying\_effects\_prime)}
+\CommentTok{# prints a summary of the model}
+\KeywordTok{summary}\NormalTok{(varying_effects_prime)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -827,43 +821,43 @@ Now that we have fitted the model, we are left with the task of interpreting the
 ##          bs ~ 1 + GroupC + (1 | ID) + (1 | Target)
 ##          ndt ~ 1 + GroupC + (1 | ID) + (1 | Target)
 ##          bias ~ 1 + GroupC * PrimeC + (1 | ID) + (1 | Target)
-##    Data: df (Number of observations: 14420) 
+##    Data: df (Number of observations: 15685) 
 ## Samples: 8 chains, each with iter = 5000; warmup = 2000; thin = 1;
 ##          total post-warmup samples = 24000
 ## 
 ## Group-Level Effects: 
-## ~ID (Number of levels: 61) 
+## ~ID (Number of levels: 66) 
 ##                    Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sd(Intercept)          0.78      0.08     0.64     0.95 1.00     6602    12714
-## sd(bs_Intercept)       0.22      0.02     0.17     0.27 1.00     8388    14065
-## sd(ndt_Intercept)      0.18      0.02     0.15     0.22 1.00     9810    13731
-## sd(bias_Intercept)     0.24      0.04     0.17     0.32 1.00    13276    15996
+## sd(Intercept)          0.79      0.08     0.66     0.96 1.00     6017    10261
+## sd(bs_Intercept)       0.18      0.02     0.15     0.23 1.00     8283    13322
+## sd(ndt_Intercept)      0.32      0.03     0.27     0.39 1.00     4905     8658
+## sd(bias_Intercept)     0.30      0.04     0.23     0.38 1.00    10921    15016
 ## 
 ## ~Target (Number of levels: 30) 
 ##                    Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sd(Intercept)          0.17      0.03     0.12     0.24 1.00    11928    17197
-## sd(bs_Intercept)       0.01      0.01     0.00     0.02 1.00     9457    13260
-## sd(ndt_Intercept)      0.01      0.01     0.00     0.02 1.00     5467     9913
-## sd(bias_Intercept)     0.05      0.02     0.01     0.10 1.00     4977     6742
+## sd(Intercept)          0.18      0.03     0.12     0.24 1.00     8719    14004
+## sd(bs_Intercept)       0.01      0.01     0.00     0.03 1.00     5586     8798
+## sd(ndt_Intercept)      0.02      0.01     0.01     0.04 1.00     5545     5153
+## sd(bias_Intercept)     0.03      0.02     0.00     0.08 1.00     5317     9585
 ## 
 ## Population-Level Effects: 
 ##                     Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## Intercept               3.01      0.11     2.80     3.23 1.00     4403     8661
-## bs_Intercept            0.68      0.03     0.63     0.74 1.00     5326    10354
-## ndt_Intercept          -1.24      0.03    -1.29    -1.19 1.00     5319     9449
-## bias_Intercept         -0.34      0.04    -0.42    -0.26 1.00    15869    17506
-## GroupC                 -0.01      0.20    -0.42     0.38 1.00     4218     7608
-## CongC                   0.32      0.03     0.27     0.38 1.00    53999    15341
-## PrimeC                 -0.11      0.04    -0.19    -0.03 1.00    29665    20079
-## GroupC:CongC           -0.10      0.05    -0.20     0.00 1.00    51192    17442
-## GroupC:PrimeC           0.05      0.08    -0.12     0.21 1.00    32073    18817
-## CongC:PrimeC            0.06      0.05    -0.04     0.17 1.00    52638    17123
-## GroupC:CongC:PrimeC    -0.02      0.11    -0.23     0.19 1.00    48842    16606
-## bs_GroupC               0.08      0.06    -0.04     0.20 1.00     4849     9417
-## ndt_GroupC              0.18      0.05     0.08     0.28 1.00     4676     9571
-## bias_GroupC             0.01      0.08    -0.15     0.17 1.00    15741    17515
-## bias_PrimeC             0.16      0.03     0.11     0.21 1.00    29322    20146
-## bias_GroupC:PrimeC     -0.02      0.05    -0.13     0.08 1.00    31600    18534
+## Intercept               3.08      0.11     2.87     3.29 1.00     3748     7299
+## bs_Intercept            0.73      0.03     0.68     0.78 1.00     5185     8832
+## ndt_Intercept          -1.32      0.04    -1.40    -1.24 1.00     3008     5300
+## bias_Intercept         -0.42      0.05    -0.51    -0.33 1.00    10148    15306
+## GroupC                 -0.06      0.20    -0.46     0.34 1.00     3317     6734
+## CongC                   0.31      0.02     0.27     0.36 1.00    40138    16830
+## PrimeC                 -0.10      0.04    -0.18    -0.02 1.00    22252    18876
+## GroupC:CongC           -0.11      0.05    -0.20    -0.01 1.00    37221    17639
+## GroupC:PrimeC          -0.00      0.08    -0.16     0.15 1.00    21239    18092
+## CongC:PrimeC            0.06      0.05    -0.04     0.15 1.00    37475    17664
+## GroupC:CongC:PrimeC    -0.02      0.10    -0.21     0.18 1.00    40402    16929
+## bs_GroupC               0.05      0.05    -0.05     0.14 1.00     5538     9940
+## ndt_GroupC              0.25      0.08     0.08     0.41 1.00     2896     4804
+## bias_GroupC             0.06      0.09    -0.12     0.24 1.00    10071    13948
+## bias_PrimeC             0.16      0.03     0.11     0.21 1.00    21880    19283
+## bias_GroupC:PrimeC      0.01      0.05    -0.10     0.11 1.00    21301    17848
 ## 
 ## Samples were drawn using sampling(NUTS). For each parameter, Bulk_ESS
 ## and Tail_ESS are effective sample size measures, and Rhat is the potential
@@ -874,12 +868,12 @@ We can retrieve the samples from the joint posterior distribution using the \tex
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# retrieves posterior samples (for all parameters)}
-\NormalTok{varying\_effects\_prime }\OtherTok{\textless{}{-}} \FunctionTok{readRDS}\NormalTok{(}\AttributeTok{file =} \StringTok{"models/wiener\_varying\_effects\_prime.rds"}\NormalTok{)}
-\NormalTok{post }\OtherTok{\textless{}{-}} \FunctionTok{posterior\_samples}\NormalTok{(varying\_effects\_prime)}
-\CommentTok{\# the "post" object has 24.000 rows (number of posterior samples) and}
-\CommentTok{\# 396 columns (number of parameters)}
-\FunctionTok{dim}\NormalTok{(post)}
+\CommentTok{# retrieves posterior samples (for all parameters)}
+\NormalTok{varying_effects_prime <-}\StringTok{ }\KeywordTok{readRDS}\NormalTok{(}\DataTypeTok{file =} \StringTok{"models/wiener_varying_effects_prime.rds"}\NormalTok{)}
+\NormalTok{post <-}\StringTok{ }\KeywordTok{posterior_samples}\NormalTok{(varying_effects_prime)}
+\CommentTok{# the "post" object has 24.000 rows (number of posterior samples) and}
+\CommentTok{# 396 columns (number of parameters)}
+\KeywordTok{dim}\NormalTok{(post)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -889,8 +883,8 @@ We can retrieve the samples from the joint posterior distribution using the \tex
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# displaying the first six samples for the first 5 parameters}
-\FunctionTok{head}\NormalTok{(post[, }\DecValTok{1}\SpecialCharTok{:}\DecValTok{5}\NormalTok{])}
+\CommentTok{# displaying the first six samples for the first 5 parameters}
+\KeywordTok{head}\NormalTok{(post[, }\DecValTok{1}\OperatorTok{:}\DecValTok{5}\NormalTok{])}
 \end{Highlighting}
 \end{Shaded}
 
@@ -913,12 +907,12 @@ From there, we can study the marginal posterior distribution for each parameter 
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# retrieves the posterior samples for the average drift rate}
-\NormalTok{average\_drift }\OtherTok{\textless{}{-}}\NormalTok{ post}\SpecialCharTok{$}\NormalTok{b\_Intercept}
-\CommentTok{\# plotting it}
-\FunctionTok{plotPost}\NormalTok{(}
-\NormalTok{  average\_drift, }\AttributeTok{showMode =} \ConstantTok{TRUE}\NormalTok{,}
-  \AttributeTok{xlab =} \FunctionTok{expression}\NormalTok{(}\FunctionTok{paste}\NormalTok{(beta[}\DecValTok{0}\NormalTok{][}\FunctionTok{paste}\NormalTok{(}\StringTok{"["}\NormalTok{, delta, }\StringTok{"]"}\NormalTok{)] ) )}
+\CommentTok{# retrieves the posterior samples for the average drift rate}
+\NormalTok{average_drift <-}\StringTok{ }\NormalTok{post}\OperatorTok{$}\NormalTok{b_Intercept}
+\CommentTok{# plotting it}
+\KeywordTok{plotPost}\NormalTok{(}
+\NormalTok{  average_drift, }\DataTypeTok{showMode =} \OtherTok{TRUE}\NormalTok{,}
+  \DataTypeTok{xlab =} \KeywordTok{expression}\NormalTok{(}\KeywordTok{paste}\NormalTok{(beta[}\DecValTok{0}\NormalTok{][}\KeywordTok{paste}\NormalTok{(}\StringTok{"["}\NormalTok{, delta, }\StringTok{"]"}\NormalTok{)] ) )}
 \NormalTok{  )}
 \end{Highlighting}
 \end{Shaded}
@@ -943,7 +937,7 @@ Figure \ref{fig:posterior-intercept-drift} reveals (consistently with the summar
 \caption{Posterior distribution of the slopes for the drift rate, for Group, Prime, and Cong (respectively). The mode (i.e., the most probable value) and the 95\% credible interval are also displayed.}\label{fig:posterior-slopes-drift}
 \end{figure}
 
-Figure \ref{fig:posterior-slopes-drift} reveals that \texttt{Cong} increased the drift rate whereas \texttt{Prime} decreased it (recall that the drift rate can be interpreted as the ``ease of processing''),\footnote{As \texttt{Cong} and \texttt{Prime} were coded using sum contrasts (-0.5 vs.~0.5), these effects can be interpreted as follows: going from incongruent to congruent stimuli or to HSF to LSF stimuli is associated with ``more'' ease of processing.} whereas the effect of \texttt{Group} is estimated to be quasi null (cf.~later hypothesis testing). What about interactions?
+Figure \ref{fig:posterior-slopes-drift} reveals that \texttt{Cong} increased the drift rate whereas \texttt{Prime} decreased it (recall that the drift rate can be interpreted as the \enquote{ease of processing}),\footnote{As \texttt{Cong} and \texttt{Prime} were coded using sum contrasts (-0.5 vs.~0.5), these effects can be interpreted as follows: going from incongruent to congruent stimuli or to HSF to LSF stimuli is associated with \enquote{more} ease of processing.} whereas the effect of \texttt{Group} is estimated to be quasi null (cf.~later hypothesis testing). What about interactions?
 
 \begin{figure}[!htb]
 
@@ -970,7 +964,7 @@ Recall that the boundary separation parameter can be interpreted as a measure of
 \caption{Posterior distribution of the intercept and the slope for Group for the boundary separation. The upper two distributions are the distributions of the intercept and the slope (on the linear scale). The lower two plots are the posterior distributions of the boundary separation parameter in the TD and ASD groups, respectively (on the linear scale).}\label{fig:posterior-bs}
 \end{figure}
 
-Therefore, we have to apply the inverse link function (i.e., \(\exp(\cdot)\)) to the parameter to be able to interpret it. Taking \(\exp(\beta_{1})\) gives the proportional change in the value of the boundary-separation parameter when we go from the TD group to the ASD group (see upper right panel of Figure \ref{fig:posterior-bs}). In our case, \(\exp(\beta_{1}) \approx\) 1.083, which means that going from TD to ASD leads to an increase of approximately 7\% in the value of the boundary-separation parameter. In other words, response caution seems higher in the ASD group (see lower right panel of Figure \ref{fig:posterior-bs}) than in the TD group (see lower left panel of Figure \ref{fig:posterior-bs}).
+Therefore, we have to apply the inverse link function (i.e., \(\exp(\cdot)\)) to the parameter to be able to interpret it. Taking \(\exp(\beta_{1})\) gives the proportional change in the value of the boundary-separation parameter when we go from the TD group to the ASD group (see upper right panel of Figure \ref{fig:posterior-bs}). In our case, \(\exp(\beta_{1}) \approx\) 1.083, which means that going from TD to ASD leads to an increase of approximately 8 \% in the value of the boundary-separation parameter. In other words, response caution seems higher in the ASD group (see lower right panel of Figure \ref{fig:posterior-bs}) than in the TD group (see lower left panel of Figure \ref{fig:posterior-bs}).
 
 \hypertarget{starting-point}{%
 \subsubsection{Starting point}\label{starting-point}}
@@ -997,7 +991,7 @@ Taking the exponential of the slope gives an odds ratio of approximately 0.99, w
 \caption{Posterior distribution of the difference between the estimated starting point in the ASD group and the estimated starting point in the TD group.}\label{fig:posterior-bias-difference}
 \end{figure}
 
-As shown in Figure \ref{fig:posterior-bias-prime}, the effect of \texttt{Prime} was positive, which means that HSF (vs.~LSF) primes were associated with a ``bias'' towards accurate responses. No interaction effect was found between \texttt{Group} and \texttt{Prime}.
+As shown in Figure \ref{fig:posterior-bias-prime}, the effect of \texttt{Prime} was positive, which means that HSF (vs.~LSF) primes were associated with a \enquote{bias} towards accurate responses. No interaction effect was found between \texttt{Group} and \texttt{Prime}.
 
 \begin{figure}[!htb]
 
@@ -1024,20 +1018,20 @@ Recall that the non-decision time parameter can be interpreted as a measure of t
 \caption{Posterior distribution of the intercept and the slope for Group for the non-decision time. The upper two distributions are the distributions of the intercept and the slope (on the linear scale). The lower two plots are the posterior distributions of the non-decision time in the TD and ASD groups, respectively (on the linear scale).}\label{fig:posterior-ndt}
 \end{figure}
 
-Therefore, we have to apply the inverse link function (i.e., \(\exp(\cdot)\)) to the parameter to be able to interpret it. Taking \(\exp(\beta_{1})\) gives the proportional change in the value of the non-decision time parameter when we go from the TD group to the ASD group. In our case, \(\exp(\beta_{1}) \approx 1.24\) which means that going from TD to ASD leads to an increase of approximately 24\% of the non-decision time parameter value. In other words, non-decisional processes seem to take longer in the ASD group than in the TD group.
+Therefore, we have to apply the inverse link function (i.e., \(\exp(\cdot)\)) to the parameter to be able to interpret it. Taking \(\exp(\beta_{1})\) gives the proportional change in the value of the non-decision time parameter when we go from the TD group to the ASD group. In our case, \(\exp(\beta_{1}) \approx 1.24\) which means that going from TD to ASD leads to an increase of approximately 24 \% of the non-decision time parameter value. In other words, non-decisional processes seem to take longer in the ASD group than in the TD group.
 
 \newpage
 
 \hypertarget{evaluating-the-model}{%
 \subsection{Evaluating the model}\label{evaluating-the-model}}
 
-One way of evaluating the model is to evaluate its predictions. If the model is a good description of the (true) process that generated the observed data, then it should be able to generate data that looks like the observed data. The process of generating data from the estimated posterior distribution is called \emph{posterior predictive checking} and can be used in many different ways using the \texttt{pp\_check()} method (\protect\hyperlink{ref-gabry_visualization_2019}{Gabry, Simpson, Vehtari, Betancourt, \& Gelman, 2019}). In Figure \ref{fig:ppc}, we depict the distribution of the raw data along with the distribution of ten simulated datasets.
+In Figure \ref{fig:ppc}, we depict the distribution of the raw data along with the distribution of ten simulated datasets.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{pp\_check}\NormalTok{(varying\_effects\_prime, }\AttributeTok{nsamples =} \DecValTok{10}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{theme\_bw}\NormalTok{(}\AttributeTok{base\_size =} \DecValTok{12}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"Response time (in seconds)"}\NormalTok{, }\AttributeTok{y =} \StringTok{"Density"}\NormalTok{)}
+\KeywordTok{pp_check}\NormalTok{(varying_effects_prime, }\DataTypeTok{nsamples =} \DecValTok{10}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{theme_bw}\NormalTok{(}\DataTypeTok{base_size =} \DecValTok{12}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Response time (in seconds)"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Density"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1050,22 +1044,22 @@ One way of evaluating the model is to evaluate its predictions. If the model is 
 \caption{Posterior predictive checking. The dark blue line represents the distribution of raw data whereas light blue lines represent data simulated from the posterior distribution.}\label{fig:ppc}
 \end{figure}
 
-As can be seen from Figure \ref{fig:ppc}, the model seems pretty good at simulating data that looks like the observed data. From this predictive/sampling distribution (i.e., the distribution of simulated data sets), so-called ``Bayesian \emph{p}-values'' can be computed to quantify the compatibility between the observed data and the proposed model.
+As can be seen from Figure \ref{fig:ppc}, the model seems pretty good at simulating data that looks like the observed data. From this predictive/sampling distribution (i.e., the distribution of simulated data sets), so-called \enquote{Bayesian \emph{p}-values} can be computed to quantify the compatibility between the observed data and the proposed model.
 
 \newpage
 
 \hypertarget{hypothesis-testing}{%
 \subsection{Hypothesis testing}\label{hypothesis-testing}}
 
-We can test any arbitrary hypothesis using the \texttt{brms::hypothesis()} method, which is computing a Bayes factor via the Savage-Dickey method (\protect\hyperlink{ref-wagenmakers_bayesian_2010}{Wagenmakers, Lodewyckx, Kuriyal, \& Grasman, 2010}), which consists in comparing the posterior probability density to the prior probability density for some hypothesised value for the parameter of interest (e.g., \(\theta = 0\)).
+We can test any arbitrary hypothesis using the \texttt{brms::hypothesis()} method, which is computing a Bayes factor via the Savage-Dickey method (Wagenmakers, Lodewyckx, Kuriyal, \& Grasman, \protect\hyperlink{ref-wagenmakers_bayesian_2010}{2010}), which consists in comparing the posterior probability density to the prior probability density for some hypothesised value for the parameter of interest (e.g., \(\theta = 0\)).
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# Plotting the Savage{-}Dickey Bayes factor}
-\CommentTok{\# testing whether the interaction Group * Congruency is equal to 0}
-\NormalTok{hyp }\OtherTok{\textless{}{-}} \FunctionTok{hypothesis}\NormalTok{(varying\_effects\_prime, }\StringTok{"GroupC:CongC = 0"}\NormalTok{)}
-\CommentTok{\# prints the output}
-\FunctionTok{print}\NormalTok{(hyp)}
+\CommentTok{# Plotting the Savage-Dickey Bayes factor}
+\CommentTok{# testing whether the interaction Group * Congruency is equal to 0}
+\NormalTok{hyp <-}\StringTok{ }\KeywordTok{hypothesis}\NormalTok{(varying_effects_prime, }\StringTok{"GroupC:CongC = 0"}\NormalTok{)}
+\CommentTok{# prints the output}
+\KeywordTok{print}\NormalTok{(hyp)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1084,17 +1078,17 @@ We can test any arbitrary hypothesis using the \texttt{brms::hypothesis()} metho
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# plotting it}
-\FunctionTok{data.frame}\NormalTok{(}\AttributeTok{posterior =}\NormalTok{ hyp}\SpecialCharTok{$}\NormalTok{samples}\SpecialCharTok{$}\NormalTok{H1, }\AttributeTok{prior =}\NormalTok{ hyp}\SpecialCharTok{$}\NormalTok{prior\_samples}\SpecialCharTok{$}\NormalTok{H1) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{gather}\NormalTok{(type, value) }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ value, }\AttributeTok{fill =}\NormalTok{ type) ) }\SpecialCharTok{+}
-  \FunctionTok{geom\_vline}\NormalTok{(}\AttributeTok{xintercept =} \DecValTok{0}\NormalTok{, }\AttributeTok{linetype =} \DecValTok{3}\NormalTok{, }\AttributeTok{alpha =} \DecValTok{1}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{geom\_area}\NormalTok{(}\AttributeTok{stat =} \StringTok{"density"}\NormalTok{, }\AttributeTok{alpha =} \FloatTok{0.8}\NormalTok{, }\AttributeTok{position =} \StringTok{"identity"}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{theme\_bw}\NormalTok{(}\AttributeTok{base\_size =} \DecValTok{12}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \FunctionTok{expression}\NormalTok{(beta[group}\SpecialCharTok{:}\NormalTok{congruency]), }\AttributeTok{y =} \StringTok{"Probability density"}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{scale\_fill\_brewer}\NormalTok{(}\AttributeTok{palette =} \StringTok{"Dark2"}\NormalTok{, }\AttributeTok{direction =} \SpecialCharTok{{-}}\DecValTok{1}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{theme}\NormalTok{(}\AttributeTok{legend.title =} \FunctionTok{element\_blank}\NormalTok{() ) }\SpecialCharTok{+}
-  \FunctionTok{coord\_cartesian}\NormalTok{(}\AttributeTok{xlim =} \FunctionTok{c}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{2}\NormalTok{, }\DecValTok{2}\NormalTok{) )}
+\CommentTok{# plotting it}
+\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{posterior =}\NormalTok{ hyp}\OperatorTok{$}\NormalTok{samples}\OperatorTok{$}\NormalTok{H1, }\DataTypeTok{prior =}\NormalTok{ hyp}\OperatorTok{$}\NormalTok{prior_samples}\OperatorTok{$}\NormalTok{H1) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{gather}\NormalTok{(type, value) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ value, }\DataTypeTok{fill =}\NormalTok{ type) ) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_vline}\NormalTok{(}\DataTypeTok{xintercept =} \DecValTok{0}\NormalTok{, }\DataTypeTok{linetype =} \DecValTok{3}\NormalTok{, }\DataTypeTok{alpha =} \DecValTok{1}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_area}\NormalTok{(}\DataTypeTok{stat =} \StringTok{"density"}\NormalTok{, }\DataTypeTok{alpha =} \FloatTok{0.8}\NormalTok{, }\DataTypeTok{position =} \StringTok{"identity"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{theme_bw}\NormalTok{(}\DataTypeTok{base_size =} \DecValTok{12}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \KeywordTok{expression}\NormalTok{(beta[group}\OperatorTok{:}\NormalTok{congruency]), }\DataTypeTok{y =} \StringTok{"Probability density"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{scale_fill_brewer}\NormalTok{(}\DataTypeTok{palette =} \StringTok{"Dark2"}\NormalTok{, }\DataTypeTok{direction =} \DecValTok{-1}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{legend.title =} \KeywordTok{element_blank}\NormalTok{() ) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{coord_cartesian}\NormalTok{(}\DataTypeTok{xlim =} \KeywordTok{c}\NormalTok{(}\OperatorTok{-}\DecValTok{2}\NormalTok{, }\DecValTok{2}\NormalTok{) )}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1107,7 +1101,7 @@ We can test any arbitrary hypothesis using the \texttt{brms::hypothesis()} metho
 \caption{Hypothesis testing via the Savage-Dickey method. The resulting Bayes factor (BF) is the ratio of the height (i.e., the density probability) of the posterior versus prior distribution at some value of interest for the parameter (here it is 0).}\label{fig:hypothesis1}
 \end{figure}
 
-The resulting Bayes factor (called ``Evid. Ratio'' in the output) may be interpreted as follows: the observed data is 4.09 more likely under the hypothesis of null effect than under the hypothesis of a non-null effect. Alternatively, the BF can be interpreted as an \emph{updating factor}, indicating by ``how much'' we should update our \emph{prior odds} (the ratio of the a priori probability of \(H_{0}\) versus \(H_{1}\)) to convert them into \emph{posterior odds} (the ratio of the a posteriori probability of \(H_{0}\) versus \(H_{1}\)). Note however that the BF is highly dependent on the prior put on the parameter. In this example, we see that despite the fact that the posterior distribution is ``less centered'' on 0 than the prior distribution, because of the vagueness of the prior distribution, the posterior distribution still allocates more probability density to 0 than the prior distribution does.
+The resulting Bayes factor (called \enquote{Evid. Ratio} in the output) may be interpreted as follows: the observed data is 4.09 more likely under the hypothesis of null effect than under the hypothesis of a non-null effect. Alternatively, the BF can be interpreted as an \emph{updating factor}, indicating by \enquote{how much} we should update our \emph{prior odds} (the ratio of the a priori probability of \(H_{0}\) versus \(H_{1}\)) to convert them into \emph{posterior odds} (the ratio of the a posteriori probability of \(H_{0}\) versus \(H_{1}\)). Note however that the BF is highly dependent on the prior put on the parameter. In this example, we see that despite the fact that the posterior distribution is \enquote{less centered} on 0 than the prior distribution, because of the vagueness of the prior distribution, the posterior distribution still allocates more probability density to 0 than the prior distribution does.
 
 \begin{table}[htb]
 
@@ -1149,7 +1143,7 @@ bias\_GroupC:PrimeC & -0.022 & 0.054 & -0.127 & 0.084 & 1.000 & 17.235\\
 
 \end{table}
 
-Finally, Table \ref{tab:summary} reports the estimates and associated credible intervals and \(\text{BF01}\)s for all slopes in the hierarchical DDM. To sum up our results, these estimates suggest that \texttt{Cong} increasew the drift rate, while \texttt{Prime} seems to decrease it, which means that congruent (vs.~incongruent) and LSF (vs.~HSF) stimuli increase the ease of processing of the stimulus. The positive effect of \texttt{Group} on the non-decision time parameter suggests non-decision related processes (such as the stimulus processing or motor processes) are different according to the group (i.e., they take longer in the ASD group than in the TD group). Finally, the effect of \texttt{Prime} on the starting point suggests that HSF (vs.~LSF) primes were associated with an a priori ``bias'' towards accurate responses.
+Finally, Table \ref{tab:summary} reports the estimates and associated credible intervals and \(\text{BF01}\)s for all slopes in the hierarchical DDM. To sum up our results, these estimates suggest that \texttt{Cong} increasew the drift rate, while \texttt{Prime} seems to decrease it, which means that congruent (vs.~incongruent) and LSF (vs.~HSF) stimuli increase the ease of processing of the stimulus. The positive effect of \texttt{Group} on the non-decision time parameter suggests non-decision related processes (such as the stimulus processing or motor processes) are different according to the group (i.e., they take longer in the ASD group than in the TD group). Finally, the effect of \texttt{Prime} on the starting point suggests that HSF (vs.~LSF) primes were associated with an a priori \enquote{bias} towards accurate responses.
 
 \hypertarget{acknowledgments}{%
 \section{Acknowledgments}\label{acknowledgments}}
@@ -1163,84 +1157,82 @@ Most of the computations presented in this paper were performed using the GRICAD
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{sessionInfo}\NormalTok{()}
+\KeywordTok{sessionInfo}\NormalTok{()}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
 ## R version 4.0.3 (2020-10-10)
 ## Platform: x86_64-apple-darwin17.0 (64-bit)
-## Running under: macOS Catalina 10.15.4
+## Running under: macOS Big Sur 10.16
 ## 
 ## Matrix products: default
 ## BLAS:   /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRblas.dylib
 ## LAPACK: /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRlapack.dylib
 ## 
 ## locale:
-## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## [1] C/en_US.UTF-8/C/C/C/C
 ## 
 ## attached base packages:
 ## [1] parallel  stats     graphics  grDevices utils     datasets  methods  
 ## [8] base     
 ## 
 ## other attached packages:
-##  [1] emmeans_1.5.3          BayesFactor_0.9.12-4.2 Matrix_1.2-18         
-##  [4] coda_0.19-4            flextable_0.6.1        ggpubr_0.4.0          
+##  [1] emmeans_1.5.4          BayesFactor_0.9.12-4.2 Matrix_1.3-2          
+##  [4] coda_0.19-4            flextable_0.6.3        ggpubr_0.4.0          
 ##  [7] kableExtra_1.3.1       qwraps2_0.5.0          car_3.0-10            
 ## [10] carData_3.0-4          reshape2_1.4.4         lattice_0.20-41       
-## [13] plyr_1.8.6             here_1.0.1             ggrepel_0.8.2         
-## [16] patchwork_1.1.0        BEST_0.5.2             HDInterval_0.2.2      
+## [13] plyr_1.8.6             here_1.0.1             ggrepel_0.9.1         
+## [16] patchwork_1.1.1        BEST_0.5.2             HDInterval_0.2.2      
 ## [19] brms_2.14.4            Rcpp_1.0.6             glue_1.4.2            
-## [22] knitr_1.31             papaja_0.1.0.9997      tinylabels_0.1.0      
-## [25] forcats_0.5.1          stringr_1.4.0          dplyr_1.0.3           
+## [22] knitr_1.31             papaja_0.1.0.9997      tinylabels_0.2.0      
+## [25] forcats_0.5.1          stringr_1.4.0          dplyr_1.0.4           
 ## [28] purrr_0.3.4            readr_1.4.0            tidyr_1.1.2           
 ## [31] tibble_3.0.6           ggplot2_3.3.3          tidyverse_1.3.0       
 ## 
 ## loaded via a namespace (and not attached):
 ##   [1] uuid_0.1-4           readxl_1.3.1         backports_1.2.1     
-##   [4] systemfonts_0.3.2    igraph_1.2.6         splines_4.0.3       
-##   [7] crosstalk_1.1.1      TH.data_1.0-10       rstantools_2.1.1    
-##  [10] inline_0.3.17        digest_0.6.27        htmltools_0.5.1.1   
-##  [13] rsconnect_0.8.16     magrittr_2.0.1       openxlsx_4.2.3      
-##  [16] modelr_0.1.8         RcppParallel_5.0.2   matrixStats_0.58.0  
-##  [19] officer_0.3.15       xts_0.12.1           sandwich_3.0-0      
-##  [22] prettyunits_1.1.1    colorspace_2.0-0     rvest_0.3.6         
-##  [25] haven_2.3.1          xfun_0.20            callr_3.5.1         
-##  [28] crayon_1.3.4         jsonlite_1.7.2       lme4_1.1-26         
-##  [31] survival_3.2-7       zoo_1.8-8            gtable_0.3.0        
-##  [34] RWiener_1.3-3        MatrixModels_0.4-1   webshot_0.5.2       
-##  [37] V8_3.4.0             pkgbuild_1.2.0       rstan_2.21.2        
-##  [40] abind_1.4-5          scales_1.1.1         mvtnorm_1.1-1       
-##  [43] DBI_1.1.1            rstatix_0.6.0        miniUI_0.1.1.1      
-##  [46] viridisLite_0.3.0    xtable_1.8-4         foreign_0.8-80      
-##  [49] stats4_4.0.3         StanHeaders_2.21.0-7 DT_0.17             
-##  [52] htmlwidgets_1.5.3    httr_1.4.2           threejs_0.3.3       
-##  [55] RColorBrewer_1.1-2   ellipsis_0.3.1       farver_2.0.3        
-##  [58] pkgconfig_2.0.3      loo_2.4.1            dbplyr_2.0.0        
-##  [61] labeling_0.4.2       tidyselect_1.1.0     rlang_0.4.10        
-##  [64] later_1.1.0.1        munsell_0.5.0        cellranger_1.1.0    
-##  [67] tools_4.0.3          cli_2.3.0            generics_0.1.0      
-##  [70] broom_0.7.4.9000     ggridges_0.5.3       evaluate_0.14       
-##  [73] fastmap_1.1.0        yaml_2.2.1           processx_3.4.5      
-##  [76] fs_1.5.0             zip_2.1.1            pbapply_1.4-3       
-##  [79] nlme_3.1-151         mime_0.9             projpred_2.0.2      
-##  [82] xml2_1.3.2           compiler_4.0.3       bayesplot_1.8.0     
-##  [85] shinythemes_1.2.0    rstudioapi_0.13      gamm4_0.2-6         
-##  [88] curl_4.3             ggsignif_0.6.0       reprex_1.0.0        
-##  [91] statmod_1.4.35       stringi_1.5.3        ps_1.5.0            
-##  [94] Brobdingnag_1.2-6    gdtools_0.2.2        nloptr_1.2.2.2      
-##  [97] markdown_1.1         shinyjs_2.0.0        vctrs_0.3.6         
-## [100] pillar_1.4.7         lifecycle_0.2.0      bridgesampling_1.0-0
-## [103] estimability_1.3     data.table_1.13.4    httpuv_1.5.5        
-## [106] R6_2.5.0             bookdown_0.21        promises_1.1.1      
-## [109] rio_0.5.16           gridExtra_2.3        rjags_4-10          
-## [112] codetools_0.2-18     boot_1.3-25          colourpicker_1.1.0  
-## [115] MASS_7.3-53          gtools_3.8.2         assertthat_0.2.1    
-## [118] rprojroot_2.0.2      withr_2.4.1          shinystan_2.5.0     
-## [121] multcomp_1.4-15      mgcv_1.8-33          hms_1.0.0           
-## [124] grid_4.0.3           minqa_1.2.4          rmarkdown_2.6       
-## [127] shiny_1.6.0          lubridate_1.7.9.2    base64enc_0.1-3     
-## [130] dygraphs_1.1.1.6
+##   [4] systemfonts_1.0.0    igraph_1.2.6         splines_4.0.3       
+##   [7] crosstalk_1.1.1      rstantools_2.1.1     inline_0.3.17       
+##  [10] digest_0.6.27        htmltools_0.5.1.1    rsconnect_0.8.16    
+##  [13] magrittr_2.0.1       openxlsx_4.2.3       modelr_0.1.8        
+##  [16] RcppParallel_5.0.2   matrixStats_0.58.0   officer_0.3.16      
+##  [19] xts_0.12.1           prettyunits_1.1.1    colorspace_2.0-0    
+##  [22] rvest_0.3.6          haven_2.3.1          xfun_0.20           
+##  [25] callr_3.5.1          crayon_1.4.0         jsonlite_1.7.2      
+##  [28] lme4_1.1-26          zoo_1.8-8            gtable_0.3.0        
+##  [31] MatrixModels_0.4-1   webshot_0.5.2        V8_3.4.0            
+##  [34] pkgbuild_1.2.0       rstan_2.21.2         abind_1.4-5         
+##  [37] scales_1.1.1         mvtnorm_1.1-1        DBI_1.1.1           
+##  [40] rstatix_0.6.0        miniUI_0.1.1.1       viridisLite_0.3.0   
+##  [43] xtable_1.8-4         foreign_0.8-81       stats4_4.0.3        
+##  [46] StanHeaders_2.21.0-7 DT_0.17              htmlwidgets_1.5.3   
+##  [49] httr_1.4.2           threejs_0.3.3        ellipsis_0.3.1      
+##  [52] farver_2.0.3         pkgconfig_2.0.3      loo_2.4.1           
+##  [55] dbplyr_2.1.0         labeling_0.4.2       tidyselect_1.1.0    
+##  [58] rlang_0.4.10         later_1.1.0.1        munsell_0.5.0       
+##  [61] cellranger_1.1.0     tools_4.0.3          cli_2.3.0           
+##  [64] generics_0.1.0       broom_0.7.4.9000     ggridges_0.5.3      
+##  [67] evaluate_0.14        fastmap_1.1.0        yaml_2.2.1          
+##  [70] processx_3.4.5       fs_1.5.0             zip_2.1.1           
+##  [73] pbapply_1.4-3        nlme_3.1-152         mime_0.9            
+##  [76] projpred_2.0.2       xml2_1.3.2           compiler_4.0.3      
+##  [79] bayesplot_1.8.0      shinythemes_1.2.0    rstudioapi_0.13     
+##  [82] gamm4_0.2-6          curl_4.3             ggsignif_0.6.0      
+##  [85] reprex_1.0.0         statmod_1.4.35       stringi_1.5.3       
+##  [88] ps_1.5.0             Brobdingnag_1.2-6    gdtools_0.2.3       
+##  [91] nloptr_1.2.2.2       markdown_1.1         shinyjs_2.0.0       
+##  [94] vctrs_0.3.6          pillar_1.4.7         lifecycle_0.2.0     
+##  [97] bridgesampling_1.0-0 estimability_1.3     data.table_1.13.6   
+## [100] httpuv_1.5.5         R6_2.5.0             bookdown_0.21       
+## [103] promises_1.1.1       rio_0.5.16           gridExtra_2.3       
+## [106] rjags_4-10           codetools_0.2-18     boot_1.3-26         
+## [109] colourpicker_1.1.0   MASS_7.3-53          gtools_3.8.2        
+## [112] assertthat_0.2.1     rprojroot_2.0.2      withr_2.4.1         
+## [115] shinystan_2.5.0      mgcv_1.8-33          hms_1.0.0           
+## [118] grid_4.0.3           minqa_1.2.4          rmarkdown_2.6       
+## [121] shiny_1.6.0          lubridate_1.7.9.2    base64enc_0.1-3     
+## [124] dygraphs_1.1.1.6
 \end{verbatim}
 
 \newpage
@@ -1250,24 +1242,20 @@ Most of the computations presented in this paper were performed using the GRICAD
 \addcontentsline{toc}{section}{References}
 
 \hypertarget{refs}{}
-\begin{CSLReferences}{1}{0}
 \leavevmode\hypertarget{ref-R-papaja}{}%
-Aust, F., \& Barth, M. (2020). \emph{{papaja}: {Create} {APA} manuscripts with {R Markdown}}. Retrieved from \url{https://github.com/crsh/papaja}
+Aust, F., \& Barth, M. (2020). \emph{papaja: Create APA manuscripts with R Markdown}. Retrieved from \url{https://github.com/crsh/papaja}
 
 \leavevmode\hypertarget{ref-barr_random_2013-1}{}%
-Barr, D. J., Levy, R., Scheepers, C., \& Tily, H. J. (2013). Random effects structure for confirmatory hypothesis testing: {Keep} it maximal. \emph{Journal of Memory and Language}, \emph{68}(3), 255--278. \url{https://doi.org/10.1016/j.jml.2012.11.001}
+Barr, D. J., Levy, R., Scheepers, C., \& Tily, H. J. (2013). Random effects structure for confirmatory hypothesis testing: Keep it maximal. \emph{Journal of Memory and Language}, \emph{68}(3), 255--278. \url{https://doi.org/10.1016/j.jml.2012.11.001}
 
 \leavevmode\hypertarget{ref-R-brms_a}{}%
-Bürkner, P.-C. (2017). {brms}: An {R} package for {Bayesian} multilevel models using {Stan}. \emph{Journal of Statistical Software}, \emph{80}(1), 1--28. \url{https://doi.org/10.18637/jss.v080.i01}
+Bürkner, P.-C. (2017). brms: An R package for Bayesian multilevel models using Stan. \emph{Journal of Statistical Software}, \emph{80}(1), 1--28. \url{https://doi.org/10.18637/jss.v080.i01}
 
 \leavevmode\hypertarget{ref-forstmann_sequential_2016}{}%
-Forstmann, B. U., Ratcliff, R., \& Wagenmakers, E.-J. (2016). Sequential {Sampling} {Models} in {Cognitive} {Neuroscience}: {Advantages}, {Applications}, and {Extensions}. \emph{Annual Review of Psychology}, \emph{67}, 641--666. \url{https://doi.org/10.1146/annurev-psych-122414-033645}
+Forstmann, B. U., Ratcliff, R., \& Wagenmakers, E.-J. (2016). Sequential Sampling Models in Cognitive Neuroscience: Advantages, Applications, and Extensions. \emph{Annual Review of Psychology}, \emph{67}, 641--666. \url{https://doi.org/10.1146/annurev-psych-122414-033645}
 
 \leavevmode\hypertarget{ref-gabry_visualization_2019}{}%
-Gabry, J., Simpson, D., Vehtari, A., Betancourt, M., \& Gelman, A. (2019). Visualization in {Bayesian} workﬂow. \emph{Journal of the Royal Statistical Society: Series A (Statistics in Society)}, \emph{182}(2), 389--402. \url{https://doi.org/10.1111/rssa.12378}
-
-\leavevmode\hypertarget{ref-R-base}{}%
-R Core Team. (2019). \emph{R: A language and environment for statistical computing}. Vienna, Austria: R Foundation for Statistical Computing. Retrieved from \url{https://www.R-project.org/}
+Gabry, J., Simpson, D., Vehtari, A., Betancourt, M., \& Gelman, A. (2019). Visualization in Bayesian workﬂow. \emph{Journal of the Royal Statistical Society: Series A (Statistics in Society)}, \emph{182}(2), 389--402. \url{https://doi.org/10.1111/rssa.12378}
 
 \leavevmode\hypertarget{ref-ratcliff_theory_1978}{}%
 Ratcliff, R. (1978). A theory of memory retrieval. \emph{Psychological Review}, \emph{85}(2), 59--108. \url{https://doi.org/10.1037/0033-295X.85.2.59}
@@ -1275,34 +1263,35 @@ Ratcliff, R. (1978). A theory of memory retrieval. \emph{Psychological Review}, 
 \leavevmode\hypertarget{ref-ratcliff_diffusion_2008}{}%
 Ratcliff, R., \& McKoon, G. (2008). The diffusion decision model: Theory and data for two-choice decision tasks. \emph{Neural Computation}, \emph{20}(4), 873--922. \url{https://doi.org/10.1162/neco.2008.12-06-420}
 
+\leavevmode\hypertarget{ref-R-base}{}%
+R Core Team. (2019). \emph{R: A language and environment for statistical computing}. Vienna, Austria: R Foundation for Statistical Computing. Retrieved from \url{https://www.R-project.org/}
+
 \leavevmode\hypertarget{ref-singmann_diffusionux2fwiener_2017}{}%
-Singmann, H. (2017). Diffusion/{Wiener} {Model} {Analysis} with brms -- {Part} {I}: {Introduction} and {Estimation}. Retrieved from \url{http://singmann.org/wiener-model-analysis-with-brms-part-i/}
+Singmann, H. (2017). Diffusion/Wiener Model Analysis with brms -- Part I: Introduction and Estimation. Retrieved from \url{http://singmann.org/wiener-model-analysis-with-brms-part-i/}
 
 \leavevmode\hypertarget{ref-vandekerckhove_crossed_2010}{}%
 Vandekerckhove, J., Verheyen, S., \& Tuerlinckx, F. (2010). A crossed random effects diffusion model for speeded semantic categorization decisions. \emph{Acta Psychologica}, \emph{133}(3), 269--282. \url{https://doi.org/10.1016/j.actpsy.2009.10.009}
 
 \leavevmode\hypertarget{ref-vinding_volition_2018}{}%
-Vinding, M., Lindeløv, J. K., Xiao, Y., Chan, R. C. K., \& Sørensen, T. A. (2018). \emph{Volition in {Prospective} {Memory}: Evidence against differences in recalling free and fixed delayed intentions}. \url{https://doi.org/10.31234/osf.io/hsrbt}
+Vinding, M., Lindeløv, J. K., Xiao, Y., Chan, R. C. K., \& Sørensen, T. A. (2018). \emph{Volition in Prospective Memory: Evidence against differences in recalling free and fixed delayed intentions}. \url{https://doi.org/10.31234/osf.io/hsrbt}
 
 \leavevmode\hypertarget{ref-wabersich_rwiener_2014}{}%
-Wabersich, D., \& Vandekerckhove, J. (2014). The {RWiener} {Package}: An {R} {Package} {Providing} {Distribution} {Functions} for the {Wiener} {Diffusion} {Model}. \emph{The R Journal}, \emph{6}(1), 49--56. Retrieved from \url{https://journal.r-project.org/archive/2014/RJ-2014-005/index.html}
+Wabersich, D., \& Vandekerckhove, J. (2014). The RWiener Package: An R Package Providing Distribution Functions for the Wiener Diffusion Model. \emph{The R Journal}, \emph{6}(1), 49--56. Retrieved from \url{https://journal.r-project.org/archive/2014/RJ-2014-005/index.html}
 
 \leavevmode\hypertarget{ref-wagenmakers_methodological_2009-1}{}%
-Wagenmakers, E.-J. (2009). Methodological and empirical developments for the {Ratcliff} diffusion model of response times and accuracy. \emph{European Journal of Cognitive Psychology}, \emph{21}(5), 641--671. \url{https://doi.org/10.1080/09541440802205067}
+Wagenmakers, E.-J. (2009). Methodological and empirical developments for the Ratcliff diffusion model of response times and accuracy. \emph{European Journal of Cognitive Psychology}, \emph{21}(5), 641--671. \url{https://doi.org/10.1080/09541440802205067}
 
 \leavevmode\hypertarget{ref-wagenmakers_bayesian_2010}{}%
-Wagenmakers, E.-J., Lodewyckx, T., Kuriyal, H., \& Grasman, R. (2010). Bayesian hypothesis testing for psychologists: {A} tutorial on the {Savage}--{Dickey} method. \emph{Cognitive Psychology}, \emph{60}(3), 158--189. \url{https://doi.org/10.1016/j.cogpsych.2009.12.001}
+Wagenmakers, E.-J., Lodewyckx, T., Kuriyal, H., \& Grasman, R. (2010). Bayesian hypothesis testing for psychologists: A tutorial on the Savage--Dickey method. \emph{Cognitive Psychology}, \emph{60}(3), 158--189. \url{https://doi.org/10.1016/j.cogpsych.2009.12.001}
 
 \leavevmode\hypertarget{ref-wagenmakers_ez-diffusion_2007}{}%
-Wagenmakers, E.-J., Van Der Maas, H. L. J., \& Grasman, R. P. P. P. (2007). An {EZ}-diffusion model for response time and accuracy. \emph{Psychonomic Bulletin \& Review}, \emph{14}(1), 3--22. \url{https://doi.org/10.3758/BF03194023}
+Wagenmakers, E.-J., Van Der Maas, H. L. J., \& Grasman, R. P. P. P. (2007). An EZ-diffusion model for response time and accuracy. \emph{Psychonomic Bulletin \& Review}, \emph{14}(1), 3--22. \url{https://doi.org/10.3758/BF03194023}
 
 \leavevmode\hypertarget{ref-R-tidyverse}{}%
-Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D., François, R., \ldots{} Yutani, H. (2019). Welcome to the {tidyverse}. \emph{Journal of Open Source Software}, \emph{4}(43), 1686. \url{https://doi.org/10.21105/joss.01686}
+Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D., François, R., \ldots{} Yutani, H. (2019). Welcome to the tidyverse. \emph{Journal of Open Source Software}, \emph{4}(43), 1686. \url{https://doi.org/10.21105/joss.01686}
 
 \leavevmode\hypertarget{ref-R-knitr}{}%
-Xie, Y. (2015). \emph{Dynamic documents with {R} and knitr} (2nd ed.). Boca Raton, Florida: Chapman; Hall/CRC. Retrieved from \url{https://yihui.org/knitr/}
-
-\end{CSLReferences}
+Xie, Y. (2015). \emph{Dynamic documents with R and knitr} (2nd ed.). Boca Raton, Florida: Chapman; Hall/CRC. Retrieved from \url{https://yihui.org/knitr/}
 
 
 \end{document}
